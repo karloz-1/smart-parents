@@ -1,9 +1,12 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
-/* Paleta de Colores */
+/* === VARIABLES === */
+
 :root {
+    /* Paleta de Colores */
     --color-bg: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
     --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
     --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
@@ -12,3 +15,95 @@
     --color-text-base: #61728e; /* Color para los textos */
     --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
 }
+
+/* === GENERAL === */
+
+h1 {
+    font-family: 'Poppins';
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Poppins';
+    color: var(--color-text-base);
+    font-size: 20px;
+}
+
+/* === HEADER === */
+    header {
+        background-color: var(--color-header);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .header__logo {
+        cursor: pointer; /* Cambia el cursor para hacer click */
+        width: 40px;
+        height: auto;
+        margin-left: 40px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 70px; /* Espacio entre items */
+        padding-right: 500px;
+    }
+
+    nav ul li {
+        text-decoration: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--color-heading);
+        font-weight: bold;
+        font-size: 17px;
+        font-family: 'Poppins';
+    }
+
+    nav ul li a:hover {
+        color: var(--color-text-btn-hover);
+    }
+
+    button {
+        border: none;
+        background-color: var(--color-header);
+    }
+
+    /* === LOGIN BTN === */
+        .header__btn_login a {
+            font-family: 'Poppins';
+            text-decoration: none;
+            background-color: white;
+            margin-right: 50px;
+            color: var(--color-heading);
+            font-size: 17px;
+            font-weight: bold;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 2%;
+            padding-top: 2%;
+            border-radius: 100px; /* borde redondeado */
+        }
+
+        .header__btn_login a:hover {
+            font-family: 'Poppins';
+            color: var(--color-text-btn-hover);
+        }
+
+/* === HEADER === */
+
+.main__texto_principal {
+    margin-left:100px;
+    margin-top: 50px;
+}
+.main__descripcion_principal {
+    display: inline-block; /* Hace que la caja del texto se ajuste al texto */
+    background-color: #00abe4;
+}
+/* === MAIN === */
