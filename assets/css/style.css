@@ -10,23 +10,147 @@
     --color-bg: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
     --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
     --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
-    --color-btn-primario-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
+    --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
     --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
     --color-text-base: #61728e; /* Color para los textos */
     --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
+    --color-icons: #aaccfb;
+
+    /* fonts */
+    /*
+
+    https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
+
+    .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+    */
 }
 
 /* === GENERAL === */
 
 h1 {
-    font-family: 'Poppins';
-    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 70px;
 }
 
 p {
-    font-family: 'Poppins';
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--color-text-base);
     font-size: 20px;
+}
+
+main {
+    display: flex;
 }
 
 /* === HEADER === */
@@ -35,15 +159,18 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 5px;
-        padding-top: 5px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     .header__logo {
         cursor: pointer; /* Cambia el cursor para hacer click */
-        width: 40px;
-        height: auto;
-        margin-left: 40px;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        color: var(--color-heading);
+        margin-left: 10px;
     }
 
     nav ul {
@@ -59,11 +186,12 @@ p {
     }
 
     nav ul li a {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         text-decoration: none;
         color: var(--color-heading);
-        font-weight: bold;
         font-size: 17px;
-        font-family: 'Poppins';
     }
 
     nav ul li a:hover {
@@ -77,33 +205,89 @@ p {
 
     /* === LOGIN BTN === */
         .header__btn_login a {
-            font-family: 'Poppins';
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
             text-decoration: none;
             background-color: white;
             margin-right: 50px;
             color: var(--color-heading);
             font-size: 17px;
-            font-weight: bold;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-bottom: 2%;
-            padding-top: 2%;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
             border-radius: 100px; /* borde redondeado */
         }
 
         .header__btn_login a:hover {
-            font-family: 'Poppins';
             color: var(--color-text-btn-hover);
         }
 
 /* === HEADER === */
 
-.main__texto_principal {
+/* === MAIN === */
+
+.main__main_section {
+    display: inline-block;
     margin-left:100px;
     margin-top: 50px;
+    padding-bottom: 5px;
+}
+.main__titulo_principal {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--color-heading);
 }
 .main__descripcion_principal {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: inline-block; /* Hace que la caja del texto se ajuste al texto */
-    background-color: #00abe4;
+    color: var(--color-text-base);
+    font-size: 22px;
+}
+.main__btn_login {
+    background-color: var(--color-bg);
+    border-radius: 50px;
+}
+.main__btn_login_div {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.main__btn_login a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background-color: var(--color-btn-primary);
+    text-decoration: none;
+    color: var(--color-bg);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    border-radius: 50px;
+}
+.main__btn_login a:hover {
+    background-color: var(--color-btn-primary-hover);
+}
+
+/* === CARD / IMG === */
+.main__img_section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.card {
+    height: 450px;
+    width: auto;
 }
 /* === MAIN === */

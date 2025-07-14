@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Conecta el CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Conecta la fuente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conecta la fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- Conecta la fuente -->
 </head>
 <body>
     <header>
         <div>
-            <img src="assets/img/home_24dp_00ABE4_FILL1_wght400_GRAD0_opsz24.svg" alt="Logo Incio" class="header__logo">
-            <a href="index.html"></a>
+            <a href="index.html" class="header__logo">Smart Parents</a>
         </div>
         <nav>
             <ul>
@@ -31,15 +33,22 @@
         </button>
     </header>
     <main>
-        <section>
+        <section class="main__main_section">
             <div class="main__texto_principal">
-                <h1 class="main__titulo_principal_index">SMART PARENTS</h1>
-                <p class="main__descripcion_principal">Una plataforma web institucional desarrollada para <br> mantener informados a los padres de familia sobre <br> la situación académica y comportamental de sus hijos.</p>
-                <p class="main__descripcion_login">Incie sesión ahora para acceder a la información</p>
+                <h1 class="main__titulo_principal">SMART PARENTS</h1>
+                <p class="main__descripcion_principal">
+                    Una plataforma web institucional desarrollada para <br> mantener informados a los padres de familia sobre <br> la situación académica y comportamental de sus hijos. <br><br>
+                    Incie sesión ahora para acceder a la información
+                </p>
             </div>
-            <button>
-                <a href="">Inciar Sesión</a>
-            </button>
+            <div class="main__btn_login_div">
+                <button class="main__btn_login">
+                    <a href="">Inciar Sesión</a>
+                </button>
+            </div>
+        </section>
+        <section class="main__img_section">
+            <img src="assets/img/id_card.svg" alt="Card" class="card">
         </section>
     </main>
 </body>
