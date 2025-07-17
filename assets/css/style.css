@@ -7,7 +7,8 @@
 
 :root {
     /* Paleta de Colores */
-    --color-bg: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
+    --color-bg-alt: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
+    --color-bg: #f3f4f6;
     --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
     --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
     --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
@@ -30,6 +31,9 @@
 
 /* === GENERAL === */
 /* === HEADER === */
+    .header {
+        background-color: var(--color-header);
+    }
 /* === HEADER === */
 /* === MAIN === */
 /* === MAIN === */
