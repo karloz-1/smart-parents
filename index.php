@@ -18,7 +18,7 @@
                 <p class="card_text">
                     SMART PARENTS es una plataforma web institucional desarrollada en HTML, CSS, PHP y MySQL, cuyo objetivo principal es mantener informados a los padres de familia sobre la situación académica y comportamental de sus hijos. Esta plataforma permitirá a los usuarios acceder a información de manera clara, rápida y segura.
                 </p>
-                <a href="#" class="main_login_btn">Iniciar Sesión</a>
+                <a href="views/login.php" class="main_login_btn">Iniciar Sesión</a>
             </div>
         </div>
         <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta">

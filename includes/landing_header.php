@@ -8,6 +8,6 @@
                 <li><a href="views/informacion.html">información</a></li>
             </ul>
         </nav>
-        <div class="nav_login"><a href="#">Iniciar Sesión</a></div>
+        <div class="nav_login"><a href="views/login.php">Iniciar Sesión</a></div>
     </header>'
 ?>

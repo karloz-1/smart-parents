@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* === VARIABLES === */
+
+:root {
+    /* Paleta de Colores */
+    --color-bg-alt: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
+    --color-bg: #f3f4f6;
+    --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
+    --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
+    --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
+    --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
+    --color-text-base: #61728e; /* Color para los textos */
+    --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
+    --color-icons: #aaccfb;
+
+    /* fonts */
+    /*
+
+    https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
+
+    .poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    */
+}
+body {
+    background-color: #00abe4;
+}
+.login_card {
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color: var(--color-bg-alt);
+    margin: 80px;
+    margin-left: 120px;
+}
