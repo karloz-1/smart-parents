@@ -26,17 +26,68 @@
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
+
+    TITULOS: 40px
+    Texto, botones, etc: 20px
     */
 }
-body {
-    background-color: #00abe4;
-}
-.login_card {
-    width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    background-color: var(--color-bg-alt);
-    margin: 80px;
-    margin-left: 120px;
-}
+/* === GENERAL === */
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: var(--color-heading);
+    }
+    label {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: var(--color-text-base);
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+/* === GENERAL === */
+
+/* === CARD === */
+    .login_card {
+        width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        background-color: var(--color-bg-alt);
+        margin: 80px;
+        margin-left: 120px;
+    }
+    .card_title {
+        background-color: var(--color-header);
+        display: flex;
+        justify-content: center;
+    }
+        /* === FORM === */
+        .form {
+            display: flex;
+            justify-self: center;
+            margin: 40px 40px;
+        }
+        .form__user {
+            display: flex;
+            flex-direction: column;
+        }
+        .form__password {
+            display: flex;
+            flex-direction: column;
+        }
+        .form_submit {
+            display: flex;
+            justify-content: center;
+        }
