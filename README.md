@@ -39,4 +39,4 @@ smart-parents/
 │   └── estructura.sql
 │
 ├── index.php               # Redirecciona según si está logueado
-└── README.md               # Explicación del proyecto
+└── README.md               # Explicación del proyect
