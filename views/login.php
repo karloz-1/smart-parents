@@ -14,17 +14,17 @@
         <div class="card_content">
             <h1 class="card_title">INICIAR SESIÓN</h1>
             <div class="card_form">
-                <form action="actions/login.php" method="POST" class="form">
+                <form action="../actions/login.php" method="post" class="form">
                     <div class="form__user">
                         <label for="user">Numero de documento</label>
-                        <input type="number" name="user" required>
+                        <input type="text" name="user" required>
                     </div>
                     <div class="form__password">
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" required>
+                        <input type="password" name="pass" required>
                     </div>
                     <div class="form__submit">
-                        <input type="submit" name="submit-btn" value="Ingresar" required>
+                        <input type="submit" name="submit_btn" value="Ingresar" required>
                         <a href="../index.php">Regresar</a>
                     </div>
                 </form>
