@@ -31,35 +31,44 @@
     Texto, botones, etc: 20px
     */
 }
-/* === GENERAL === */
-    body {
-        height: 100vh;
+/* === HEADER === */
+    .header {
+        background-color: var(--color-header);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 50px;
+    }
+    .header_logo {
+        margin-left: 40px;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        color: var(--color-heading);
-    }
-    label {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        color: var(--color-text-base);
-    }
-    form {
+    .nav {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
     }
-/* === GENERAL === */
-
-/* === CARD === */
-    .login_card {
+    .nav_list {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+    .nav_login {
+        display: flex;
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: 40px;
+        background-color: var(--color-bg-alt);
+        border-radius: 8px;
+        padding: 5px;
+    }
+/* === HEADER === */
+/* === MAIN === */
+    .main {
+        display: flex;
+        gap: 150px;
+    }
+    .main_card {
         width: 500px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -72,23 +81,26 @@
         background-color: var(--color-header);
         display: flex;
         justify-content: center;
-        font-size: 40px;
     }
-        /* === FORM === */
-        .form {
-            display: flex;
-            justify-self: center;
-            margin: 40px 40px;
-        }
-        .form__user {
-            display: flex;
-            flex-direction: column;
-        }
-        .form__password {
-            display: flex;
-            flex-direction: column;
-        }
-        .form_submit {
-            display: flex;
-            justify-content: center;
-        }
+    .card_text {
+        margin: 20px;
+    }
+    .main_login_btn {
+        background-color: var(--color-btn-primary);
+        color: white;
+        display: flex;
+        justify-self: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 22px;
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .main_login_btn:hover {
+        background-color: var(--color-btn-primary-hover);
+        color: white;
+    }
+    .id_card {
+        width: 300px;
+    }
+/* === MAIN === */
