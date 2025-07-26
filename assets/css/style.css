@@ -1,21 +1,24 @@
+/*
+
+ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN LOS ESTILOS.
+
+*/
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 /* === VARIABLES === */
-
 :root {
     /* Paleta de Colores */
-    --color-bg-alt: #ffffff; /* Color para el fondo de las paginas, botones secundarios, texto de botones, etc */
-    --color-bg: #f3f4f6;
+    --color-bg: #ffffff;
     --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
     --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
     --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
     --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
     --color-text-base: #61728e; /* Color para los textos */
     --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
-    --color-icons: #aaccfb;
+    --color-icons: #aaccfb; /* Color para las imagenes, ilustraciones, iconos, etc. */
 
     /* fonts */
     /*
@@ -27,9 +30,10 @@
     font-weight: 100;
     font-style: normal;
 
-    TITULOS: 40px
-    Texto, botones, etc: 20px
     */
+/* === VARIABLES === */
+
+/* === GENERAL === */
 }
     a {
         text-decoration: none;
@@ -57,3 +61,60 @@
         line-height: 30px;
         font-size: 20px;
     }
+/* === GENERAL === */
+
+/* === HEADER === */
+    .header {
+        background-color: var(--color-header);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 50px;
+    }
+    .header_logo {
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .header_nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header_nav_list {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+    .header_nav_login {
+        display: flex;
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: 40px;
+    }
+/* === HEADER === */
+
+.btn_primary {
+    background-color: var(--color-btn-primary);
+    color: white;
+    display: flex;
+    justify-self: center;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 3px 10px;
+}
+.btn_primary:hover {
+    background-color: var(--color-btn-primary-hover);
+    color:  white;
+}
+.btn_secundary {
+    background-color: var(--color-bg);
+    color: var(--color-heading);
+    display: flex;
+    justify-self: center;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 3px 10px;
+}
+.btn_secundary:hover {
+    color: var(--color-text-btn-hover);
+}
