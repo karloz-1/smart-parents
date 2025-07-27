@@ -34,40 +34,6 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
 /* === VARIABLES === */
 
 /* === TEXTO === */
-/* === TEXTO === */
-
-/* === BOTONES === */
-/* === BOTONES === */
-
-/* === TITULOS === */
-/* === TITULOS === */
-
-/* === HEADER === */
-/* === HEADER === */
-
-/* === INPUT === */
-/* === INPUT === */
-
-}
-    a {
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 20px;
-        transition: color 0.2s ease;
-    }
-    a:hover {
-        color: var(--color-text-btn-hover);
-    }
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 36px;
-    }
     p {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
@@ -83,114 +49,147 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-size: 20px;
         color: var(--color-text-base);
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    textarea,
-    select {
-        width: 100%;
-        padding: 12px 16px;
-        margin-bottom: 16px;
-        border: 1.5px solid #ccc;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        font-size: 16px;
-        color: #333;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        box-sizing: border-box;
-    }
+/* === TEXTO === */
 
-    /* Efecto al enfocar el input */
-    input:focus,
-    textarea:focus,
-    select:focus {
-        border-color: #4a90e2;
-        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-        outline: none;
-    }
-
-    /* Placeholder estilizado */
-    input::placeholder,
-    textarea::placeholder {
-        color: #999;
-        font-style: italic;
-    }
-
-    /* Deshabilitado */
-    input:disabled,
-    textarea:disabled,
-    select:disabled {
-        background-color: #eaeaea;
-        color: #888;
-        cursor: not-allowed;
-    }
-
-    /* Botón para enviar el formulario */
-    button[type="submit"] {
-        padding: 12px 20px;
-        background-color: #4a90e2;
+/* === BOTONES === */
+    .btn_primary {
+        background-color: var(--color-btn-primary);
         color: white;
-        border: none;
+        display: flex;
+        justify-self: center;
+        font-size: 20px;
         border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        padding: 3px 10px;
+        transition: background-color 0.2s ease;
     }
+    .btn_primary:hover {
+        background-color: var(--color-btn-primary-hover);
+        color:  white;
+    }
+    .btn_secundary {
+        background-color: var(--color-bg);
+        color: var(--color-heading);
+        display: flex;
+        justify-self: center;
+        font-size: 20px;
+        border-radius: 8px;
+        padding: 3px 10px;
+    }
+    .btn_secundary:hover {
+        color: var(--color-text-btn-hover);
+    }
+    a {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--color-heading);
+        font-size: 20px;
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: var(--color-text-btn-hover);
+    }
+/* === BOTONES === */
 
-    button[type="submit"]:hover {
-        background-color: #357ab8;
+/* === TITULOS === */
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: var(--color-heading);
+        font-size: 36px;
     }
+/* === TITULOS === */
+
+/* === HEADER === */
     .header {
-        background-color: var(--color-header);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        height: 50px;
-    }
-    .header_logo {
-        margin-left: 40px;
-        display: flex;
-        align-items: center;
-    }
-    .header_nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .header_nav_list {
-        list-style: none;
-        display: flex;
-        gap: 30px;
-    }
-    .header_nav_login {
-        display: flex;
-        justify-self: flex-end;
-        align-self: center;
-        margin-right: 40px;
-    }
-.btn_primary {
-    background-color: var(--color-btn-primary);
-    color: white;
-    display: flex;
-    justify-self: center;
-    font-size: 20px;
-    border-radius: 8px;
-    padding: 3px 10px;
-    transition: background-color 0.2s ease;
-}
-.btn_primary:hover {
-    background-color: var(--color-btn-primary-hover);
-    color:  white;
-}
-.btn_secundary {
-    background-color: var(--color-bg);
-    color: var(--color-heading);
-    display: flex;
-    justify-self: center;
-    font-size: 20px;
-    border-radius: 8px;
-    padding: 3px 10px;
-}
-.btn_secundary:hover {
-    color: var(--color-text-btn-hover);
-}
+            background-color: var(--color-header);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 50px;
+        }
+        .header_logo {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .header_nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header_nav_list {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .header_nav_login {
+            display: flex;
+            justify-self: flex-end;
+            align-self: center;
+            margin-right: 40px;
+        }
+/* === HEADER === */
+
+/* === INPUT === */
+    /* Estilos generales para inputs, textarea y select */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            border: 1.5px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+        }
+
+        /* Efecto al enfocar el input */
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+            outline: none;
+        }
+
+        /* Placeholder estilizado */
+        input::placeholder,
+        textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Deshabilitado */
+        input:disabled,
+        textarea:disabled,
+        select:disabled {
+            background-color: #eaeaea;
+            color: #888;
+            cursor: not-allowed;
+        }
+
+        /* Botón para enviar el formulario */
+        button[type="submit"] {
+            padding: 12px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #357ab8;
+        }
+/* === INPUT === */
