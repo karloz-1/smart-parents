@@ -22,7 +22,7 @@
 
     https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
 
-    .poppins {
+    .poppins 
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -74,5 +74,5 @@
         }
         .form_submit {
             display: flex;
-            justify-content: center;
+            justify-self: center;
         }

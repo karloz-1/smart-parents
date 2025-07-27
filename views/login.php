@@ -26,8 +26,8 @@
                     </div>
                     <div class="form__submit">
                         <button type="submit" name="submit_btn">Ingresar</button>
-                        <a href="../index.php">Regresar</a>
                     </div>
+                    <a href="../index.php">Regresar</a>
                 </form>
             </div>
             <div class="card_btn_login"></div>

@@ -25,12 +25,13 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
 
     https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
 
-    .poppins {
+    .poppins 
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
 
     */
+}
 /* === VARIABLES === */
 
 /* === TEXTO === */
@@ -55,12 +56,10 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     .btn_primary {
         background-color: var(--color-btn-primary);
         color: white;
-        display: flex;
-        justify-self: center;
         font-size: 20px;
         border-radius: 8px;
         padding: 3px 10px;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.3s ease;
     }
     .btn_primary:hover {
         background-color: var(--color-btn-primary-hover);
@@ -69,8 +68,6 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     .btn_secundary {
         background-color: var(--color-bg);
         color: var(--color-heading);
-        display: flex;
-        justify-self: center;
         font-size: 20px;
         border-radius: 8px;
         padding: 3px 10px;
@@ -85,10 +82,16 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-style: normal;
         color: var(--color-heading);
         font-size: 20px;
-        transition: color 0.2s ease;
+        transition: color 0.3s ease;
     }
     a:hover {
         color: var(--color-text-btn-hover);
+    }
+    button {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
     }
 /* === BOTONES === */
 
@@ -134,62 +137,61 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
 
 /* === INPUT === */
     /* Estilos generales para inputs, textarea y select */
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="number"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px 16px;
-            margin-bottom: 16px;
-            border: 1.5px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            font-size: 16px;
-            color: #333;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            box-sizing: border-box;
-        }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px 16px;
+        margin-bottom: 16px;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        font-size: 20px;
+        color: var(--color-heading);
+        transition: border-color 0.3s, box-shadow 0.3s;
+        box-sizing: border-box;
+    }
 
-        /* Efecto al enfocar el input */
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #4a90e2;
-            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-            outline: none;
-        }
+    /* Efecto al enfocar el input */
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: var(--color-btn-primary);
+        box-shadow: 0 0 5px rgba(0, 171, 228, 0.5);
+        outline: none;
+    }
 
-        /* Placeholder estilizado */
-        input::placeholder,
-        textarea::placeholder {
-            color: #999;
-            font-style: italic;
-        }
+    /* Placeholder estilizado */
+    input::placeholder,
+    textarea::placeholder {
+        color: #999;
+        font-style: italic;
+    }
 
-        /* Deshabilitado */
-        input:disabled,
-        textarea:disabled,
-        select:disabled {
-            background-color: #eaeaea;
-            color: #888;
-            cursor: not-allowed;
-        }
+    /* Deshabilitado */
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+        background-color: #eaeaea;
+        color: #888;
+        cursor: not-allowed;
+    }
 
-        /* Botón para enviar el formulario */
-        button[type="submit"] {
-            padding: 12px 20px;
-            background-color: #4a90e2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    /* Botón para enviar el formulario */
+    button[type="submit"] {
+        background-color: var(--color-btn-primary);
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+        padding: 3px 10px;
+        transition: background-color 0.3s ease;
+        border: none;
+    }
 
-        button[type="submit"]:hover {
-            background-color: #357ab8;
-        }
+    button[type="submit"]:hover {
+        background-color: var(--color-btn-primary-hover);
+    }
 /* === INPUT === */
