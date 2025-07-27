@@ -33,7 +33,21 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     */
 /* === VARIABLES === */
 
-/* === GENERAL === */
+/* === TEXTO === */
+/* === TEXTO === */
+
+/* === BOTONES === */
+/* === BOTONES === */
+
+/* === TITULOS === */
+/* === TITULOS === */
+
+/* === HEADER === */
+/* === HEADER === */
+
+/* === INPUT === */
+/* === INPUT === */
+
 }
     a {
         text-decoration: none;
@@ -42,6 +56,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-style: normal;
         color: var(--color-heading);
         font-size: 20px;
+        transition: color 0.2s ease;
     }
     a:hover {
         color: var(--color-text-btn-hover);
@@ -61,9 +76,71 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         line-height: 30px;
         font-size: 20px;
     }
-/* === GENERAL === */
+    label {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: var(--color-text-base);
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px 16px;
+        margin-bottom: 16px;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        color: #333;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        box-sizing: border-box;
+    }
 
-/* === HEADER === */
+    /* Efecto al enfocar el input */
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #4a90e2;
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        outline: none;
+    }
+
+    /* Placeholder estilizado */
+    input::placeholder,
+    textarea::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+
+    /* Deshabilitado */
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+        background-color: #eaeaea;
+        color: #888;
+        cursor: not-allowed;
+    }
+
+    /* Botón para enviar el formulario */
+    button[type="submit"] {
+        padding: 12px 20px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #357ab8;
+    }
     .header {
         background-color: var(--color-header);
         display: grid;
@@ -91,8 +168,6 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         align-self: center;
         margin-right: 40px;
     }
-/* === HEADER === */
-
 .btn_primary {
     background-color: var(--color-btn-primary);
     color: white;
@@ -101,6 +176,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     font-size: 20px;
     border-radius: 8px;
     padding: 3px 10px;
+    transition: background-color 0.2s ease;
 }
 .btn_primary:hover {
     background-color: var(--color-btn-primary-hover);

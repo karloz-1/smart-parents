@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Smart Parents</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Conecta la fuente -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conecta la fuente -->
@@ -24,7 +25,7 @@
                         <input type="password" name="pass" required>
                     </div>
                     <div class="form__submit">
-                        <input type="submit" name="submit_btn" value="Ingresar" required>
+                        <button type="submit" name="submit_btn">Ingresar</button>
                         <a href="../index.php">Regresar</a>
                     </div>
                 </form>
