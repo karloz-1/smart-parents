@@ -1,13 +1,13 @@
 <?php
-session_start();
+    session_start();
 
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
-    exit();
-}
+    if (!isset($_SESSION['id_usuario'])) {
+        header("Location: login.php");
+        exit();
+    }
 
-$id_usuario = $_SESSION['id_usuario'];
-$rol = $_SESSION['rol'];
+    $id_usuario = $_SESSION['id_usuario'];
+    $rol = $_SESSION['rol'];
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +24,8 @@ $rol = $_SESSION['rol'];
 <body>
     <?php
 
-    include '../includes/dashboard_header.php';
-    echo $id_usuario;
+        include '../includes/dashboard_header.php';
+        echo $id_usuario;
 
     ?>
 </body>

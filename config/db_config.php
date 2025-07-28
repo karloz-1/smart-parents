@@ -5,11 +5,13 @@
     $dbpass = "";
     $dbname = "smart_parents";
 
-    $conn =new mysqli($dbhost,$dbuser,$dbpass,$dbname,3306);
+    $conexion = new mysqli($dbhost,$dbuser,$dbpass,$dbname,3306);
 
-    if ($conn->connect_error){
-        die("Fallo en la conexion".$conn->connect_error);
+    if ($conexion->connect_error){
+        die("Fallo en la conexion".$conexion->connect_error);
     }
-    echo "¡Conexion exitosa! <br>";
+    echo "¡Conexion exitosa!<br>
+    database host: $dbhost<br>
+    database: $dbname<br><br>";
 
 ?>

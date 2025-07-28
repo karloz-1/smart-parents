@@ -15,7 +15,7 @@
         <div class="card_content">
             <h1 class="card_title">INICIAR SESIÓN</h1>
             <div class="card_form">
-                <form action="../actions/login.php" method="post" class="form">
+                <form action="../actions/login.php" method="POST" class="form">
                     <div class="form__user">
                         <label for="user">Numero de documento</label>
                         <input type="text" name="user" required>
