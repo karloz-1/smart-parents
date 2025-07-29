@@ -7,7 +7,7 @@
         <nav class="header_nav">    <!-- Contenedor de navegación del sitio -->
             <ul class="header_nav_list">    <!-- Lista de enlaces del menú de navegación -->
                 <li><a href="../views/dashboard.php">Inicio</a></li>                     <!-- Enlace a al dashboard -->';
-                if ($rol === 'profesor' || 'admistrador') {
+                if ($rol === 'profesor') {
                     echo '<li><a href="../views/registrar_eventos.php">Registrar eventos</a></li>   <!-- Enlace a la pagina de registro de eventos-->';
                 };
                 if ($rol === 'administrador') {
@@ -18,8 +18,8 @@
                 };
         echo'</ul>
         </nav>
-        <div class="header_nav_login">  <!-- Contenedor del boton de cerrar sesión -->
-            <a href="../actions/logout.php" class="btn_secundary">Cerrar Sesión</a>  <!-- Botón para ir a la pagina de cerrar sesión -->
+        <div class="header_nav_login">  <!-- Contenedor del boton de iniciar sesión -->
+            <a href="views/login.php" class="btn_secundary">Cerrar Sesión</a>  <!-- Botón para ir a la pagina de iniciar sesión -->
         </div>
     </header>';
 ?>

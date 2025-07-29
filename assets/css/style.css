@@ -109,7 +109,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     .header {
             background-color: var(--color-header);
             display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             height: 50px;
         }
         .header_logo {
