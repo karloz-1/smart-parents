@@ -26,7 +26,7 @@
         <h1>Registrar un nuevo estudiante</h1>
     </div>
     <div class="form_content">
-        <form action="../actions/registrar_usuarios.php" method="post">
+        <form action="../actions/registrar_usuarios.php" method="POST">
             <div class="form_nombre1">
                 <label for="nombre1">Primer nombre</label>
                 <input type="text" name="nombre1" required>
