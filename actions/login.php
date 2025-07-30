@@ -9,7 +9,7 @@
     //Login
 
     if(isset($_POST["submit_btn"])) {
-        $query = mysqli_query($conn,"SELECT * from usuarios where identificacion ='$identificacion' AND password ='$pass'"); 
+        $query = mysqli_query($conexion,"SELECT * from usuarios where identificacion ='$identificacion' AND password ='$pass'"); 
         $nr = mysqli_num_rows($query); 
         // registros por filas
         // si logra encontrar alguna coincidencia entonces se tiene una fila de datos y permite que
