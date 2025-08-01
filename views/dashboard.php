@@ -23,9 +23,8 @@
 </head>
 <body>
     <?php
-
         include '../includes/dashboard_header.php';
-        echo $id_usuario;
+        echo $id_usuario . " " . $nombre . " " . $rol;
 
     ?>
 </body>
