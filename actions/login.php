@@ -2,28 +2,34 @@
 
     session_start();
     include("../config/db_config.php");
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $identificacion = $_POST["user"];
     $pass = $_POST["pass"];
 
     //Login
 
-    if(isset($_POST["submit_btn"])) {
-        $query = mysqli_query($conexion,"SELECT * from usuarios where identificacion ='$identificacion' AND password ='$pass'"); 
-        $nr = mysqli_num_rows($query); 
-        // registros por filas
-        // si logra encontrar alguna coincidencia entonces se tiene una fila de datos y permite que
-        // el usuario avance , en caso contrario lo devuelva al login
+    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE identificacion = ?");
+        $stmt->bind_param("s", $identificacion);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
 
-        if ( $nr == 1 ) {
-            // Login exitoso
-            $fila = mysqli_fetch_assoc($query);
-            $_SESSION['id_usuario'] = $fila['id_usuario'];
-            $_SESSION['rol'] = $fila["rol"];
-            header("Location: ../views/dashboard.php"); // Rediriges al dashboard
-            exit();
-        } else {
-            echo "Usuario o contraseña incorrecta";
+        if ($resultado->num_rows === 1) {
+            $usuario = $resultado->fetch_assoc();
+
+            if ($usuario['password'] === $pass) {
+                // Login exitoso: guardar en sesión
+                $_SESSION['id_usuario'] = $usuario['id_usuario'];
+                $_SESSION['rol'] = $usuario['rol'];
+                $_SESSION['nombre'] = $usuario['nombre1'] . " " . $usuario['apellido1'];
+
+                header("Location: ../views/dashboard.php"); // Redirige al dashboard
+                exit();
+            }
         }
-    }
+
+        // Si falla
+        header("Location: ../views/login.php?error=1");
+        exit();
+}
 ?>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['id_usuario'])) {
+    header("Location: dashboard.php"); // Redirige si ya está logueado
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +23,7 @@
         <div class="card_content">
             <h1 class="card_title">INICIAR SESIÓN</h1>
             <div class="card_form">
-                <form action="../actions/login.php" method="post" class="form">
+                <form action="../actions/login.php" method="POST" class="form">
                     <div class="form__user">
                         <label for="user">Numero de documento</label>
                         <input type="text" name="user" required>
@@ -29,8 +37,12 @@
                     </div>
                     <a href="../index.php">Regresar</a>
                 </form>
+                <?php 
+                    if (isset ($_GET['error'])) {
+                        echo '<div class="mensaje error">Usuario o contraseña incorrectos</div>';
+                    }
+                ?>
             </div>
-            <div class="card_btn_login"></div>
         </div>
     </div>
 </body>
