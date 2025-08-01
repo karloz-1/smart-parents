@@ -8,6 +8,9 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
     margin: 0px;
     box-sizing: border-box;
 }
+main {
+    margin: 20px;
+}
 /* === VARIABLES === */
 :root {
     /* Paleta de Colores */
