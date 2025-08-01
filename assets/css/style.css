@@ -192,6 +192,7 @@ main {
         padding: 3px 10px;
         transition: background-color 0.2s ease;
         border: none;
+        width: 100%;
     }
 
     button[type="submit"]:hover {

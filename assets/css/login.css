@@ -67,12 +67,15 @@
         .form__user {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         .form__password {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         .form_submit {
             display: flex;
             justify-self: center;
+            width: 100%;
         }
