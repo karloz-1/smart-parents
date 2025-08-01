@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $rol = $_POST['rol'];
     $asignatura = $_POST['asignatura'] === "" ? NULL : $_POST['asignatura'];
-    $password = $_POST['password']; //
+    $password = $_POST['password'];
 
     // Preparar la consulta para evitar inyección SQL
     $stmt = $conexion->prepare("INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
