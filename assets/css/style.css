@@ -59,7 +59,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-size: 20px;
         border-radius: 8px;
         padding: 3px 10px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.2s ease;
     }
     .btn_primary:hover {
         background-color: var(--color-btn-primary-hover);
@@ -82,7 +82,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-style: normal;
         color: var(--color-heading);
         font-size: 20px;
-        transition: color 0.3s ease;
+        transition: color 0.2s ease;
     }
     a:hover {
         color: var(--color-text-btn-hover);
@@ -151,7 +151,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         background-color: #f9f9f9;
         font-size: 20px;
         color: var(--color-heading);
-        transition: border-color 0.3s, box-shadow 0.3s;
+        transition: border-color 0.2s, box-shadow 0.2s;
         box-sizing: border-box;
     }
 
@@ -187,7 +187,7 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
         font-size: 20px;
         border-radius: 8px;
         padding: 3px 10px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.2s ease;
         border: none;
     }
 
