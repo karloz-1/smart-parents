@@ -1,31 +1,48 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+session_start();
 
-include '../config/db_config.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recoger y limpiar datos del formulario
-    $identificacion = trim($_POST['identificacion']);
-    $nombre1        = trim($_POST['nombre1']);
-    $nombre2        = trim($_POST['nombre2']);
-    $apellido1      = trim($_POST['apellido1']);
-    $apellido2      = trim($_POST['apellido2']);
-    $email          = trim($_POST['email']);
-    $telefono       = trim($_POST['telefono']);
-    $password       = trim($_POST['password']);
-    $rol            = trim($_POST['rol']);
-    $asignatura     = trim($_POST['asignatura']);
-
-    // Si asignatura está vacía, ponerla como NULL (porque es ENUM NULL)
-    $asignatura = !empty($_POST['asignatura']) ? $_POST['asignatura'] : NULL;
-
-    $sql = "INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES ('$rol', '$identificacion', '$nombre1', '$nombre2', '$apellido1', '$apellido2', '$email', '$telefono', '$password', "($asignatura === NULL) ? NULL : '$asignatura' .")";
-    if (mysqli_query($conexion, $sql)) {
-        echo "<script> alert('usuario registrado con exito :$nombre');</script>";
-    } else {
-        echo "Error : " . $sql . "<br>" . mysqli_error($conexion);
-    }
+// Verifica que el usuario sea administrador
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'administrador') {
+    echo "Acceso denegado.";
+    exit();
 }
-    
-?>
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Conexión a la base de datos
+    include("../config/db_config.php");
+
+    // Recoger y limpiar los datos del formulario
+    $nombre1 = trim($_POST['nombre1']);
+    $nombre2 = trim($_POST['nombre2']);
+    $apellido1 = trim($_POST['apellido1']);
+    $apellido2 = trim($_POST['apellido2']);
+    $identificacion = trim($_POST['identificacion']);
+    $telefono = trim($_POST['telefono']);
+    $email = trim($_POST['email']);
+    $rol = $_POST['rol'];
+    $asignatura = $_POST['asignatura'] === "" ? NULL : $_POST['asignatura'];
+    $password = $_POST['password']; //
+
+    // Preparar la consulta para evitar inyección SQL
+    $stmt = $conexion->prepare("INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $rol, $identificacion, $nombre1, $nombre2, $apellido1, $apellido2, $email, $telefono, $password, $asignatura);
+
+    try {
+        if ($stmt->execute()) {
+            header("Location: ../views/registrar_usuarios.php?success=1");
+            exit();
+        } else {
+            header("Location: ../views/registrar_usuarios.php?error=1");
+            exit();
+        }
+    } catch (mysqli_sql_exception $e) {
+        header("Location: ../views/registrar_usuarios.php?error=duplicado");
+        exit();
+    }
+
+    $stmt->close();
+    $conexion->close();
+} else {
+    echo "Método no permitido.";
+}
+

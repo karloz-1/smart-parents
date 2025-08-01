@@ -85,8 +85,20 @@
                     <button type="submit" name="submit_btn">Registrar</button>
                 </div>
             </form>
+
+            <?php
+            
+            if (isset($_GET['success'])) {
+                echo '<div class="mensaje exito">Usuario registrado correctamente.</div>';
+            } elseif ($_GET['error'] === 1) {
+                echo '<div class="mensaje error">Hubo un error al registrar el usuario.</div>';
+            } elseif ($_GET['error'] === 'duplicado') {
+                echo '<div class="mensaje error">El usuario ya existe (identificación o correo repetido).</div>';
+            }
+
+            ?>
+
         </div>
     </main>
-
 </body>
 </html>
