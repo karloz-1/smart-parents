@@ -24,7 +24,7 @@
 <body>
     <?php
         include '../includes/dashboard_header.php';
-        echo $id_usuario . " " . $nombre . " " . $rol;
+        include '../actions/dashboard.php';
 
     ?>
 </body>

@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Login exitoso: guardar en sesión
                 $_SESSION['id_usuario'] = $usuario['id_usuario'];
                 $_SESSION['rol'] = $usuario['rol'];
-                $_SESSION['nombre'] = $usuario['nombre1'] . " " . $usuario['apellido1'];
 
                 header("Location: ../views/dashboard.php"); // Redirige al dashboard
                 exit();
