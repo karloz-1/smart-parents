@@ -34,7 +34,7 @@
                         <p>Acceder al CRUD completo de todos los usuarios. Usted podrá acceder a todo el contenido de la base de datos (usuarios) ademas de poder crear, leer, actualizar y eliminar usuarios.</p>
                     </div>
                     <div class="card_button">
-                        <a href="" class="btn_primary">Ingresar</a>
+                        <a href="crud_usuarios.php" class="btn_primary">Ingresar</a>
                     </div>
                 </div>
             </div>
