@@ -20,7 +20,9 @@
     --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
     --color-text-base: #61728e; /* Color para los textos */
     --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
-    --color-icons: #aaccfb;
+    --color-icons: #aaccfb; /* Color para las imagenes, ilustraciones, iconos, etc. */
+    --color-green: #40a02b;
+    --color-red: #d20f39;
 
     /* fonts */
     /*
