@@ -108,6 +108,13 @@ main {
         color: var(--color-heading);
         font-size: 36px;
     }
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: var(--color-heading);
+        font-size: 28;
+    }
 /* === TITULOS === */
 
 /* === HEADER === */
