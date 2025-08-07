@@ -7,7 +7,7 @@
     }
 
     // Conexion a la base de datos
-    include '../config/db_config.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     if (!isset($_GET['id'])) {
         echo "id no especificado";
@@ -35,5 +35,5 @@
 
     $usuario = $resultado->fetch_assoc();
 
-    header("Location: ../views/editar_usuarios.php?");
+    header("Location: /smart-parents/views/editar_usuarios.php?");
 ?>

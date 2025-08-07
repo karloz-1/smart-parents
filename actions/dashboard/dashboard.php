@@ -2,7 +2,7 @@
 
     // Incluye la conexion a la db
     session_start();
-    include ("../config/db_config.php");
+    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     // Consulta
     $sql = "SELECT nombre1, nombre2, apellido1, apellido2 FROM usuarios WHERE id_usuario = $id_usuario";

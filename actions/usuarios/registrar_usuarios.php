@@ -9,7 +9,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'administrador') {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conexión a la base de datos
-    include("../config/db_config.php");
+    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     // Recoger y limpiar los datos del formulario
     $nombre1 = trim($_POST['nombre1']);
@@ -23,20 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $asignatura = $_POST['asignatura'] === "" ? NULL : $_POST['asignatura'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    // Preparar la consulta para evitar inyección SQL
+    // Preparar la consulta
     $stmt = $conexion->prepare("INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssssssss", $rol, $identificacion, $nombre1, $nombre2, $apellido1, $apellido2, $email, $telefono, $password, $asignatura);
 
     try {
         if ($stmt->execute()) {
-            header("Location: ../views/registrar_usuarios.php?success=1");
+            header("Location: /smart-parents/views/registrar_usuarios.php?success=1");
             exit();
         } else {
-            header("Location: ../views/registrar_usuarios.php?error=1");
+            header("Location: /smart-parents/views/registrar_usuarios.php?error=1");
             exit();
         }
     } catch (mysqli_sql_exception $e) {
-        header("Location: ../views/registrar_usuarios.php?error=duplicado");
+        header("Location: /smart-parents/views/registrar_usuarios.php?error=duplicado");
         exit();
     }
 

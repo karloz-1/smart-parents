@@ -7,7 +7,7 @@
     }
 
     // Conexion a la base de datos
-    include '../config/db_config.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     // Consulta
     $sql = "SELECT * FROM usuarios";
