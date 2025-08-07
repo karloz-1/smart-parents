@@ -49,8 +49,8 @@
                 <?php while ($row = $resultado->fetch_assoc()) { ?>
                     <tr>
                         <td>
-                            <a href="">Editar</a>
-                            <a href="">Borrar</a>
+                            <a href="../actions/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
+                            <a href="../actions/editar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
                         </td>
                         <td><?= $row['id_usuario']; ?></td>
                         <td><?= $row['rol']; ?></td>
