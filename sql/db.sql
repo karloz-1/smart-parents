@@ -33,4 +33,4 @@ CREATE TABLE eventos (
 );
 
 -- Usuario admin
-INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES ('administrador', '1234567890', 'Admin', 'Prueba', 'Doe', 'Perez', 'admin@gmail.com', '1234567890', '12345', 'Administración');
+INSERT INTO usuarios (rol, identificacion, nombre1, nombre2, apellido1, apellido2, email, telefono, password, asignatura) VALUES ('administrador', '1234567890', 'Admin', 'Prueba', 'Doe', 'Perez', 'admin@gmail.com', '1234567890', '$2y$10$MF7J7gglpQUiOOVgf2PkNOJgWwYprlu13iHjFMLvoYMukFSHkH09y', 'Administración'); /* Contraseña 12345 */

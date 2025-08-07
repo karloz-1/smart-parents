@@ -5,7 +5,7 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $identificacion = $_POST["user"];
-    $pass = $_POST["pass"];
+    $pass = $_POST['pass'];
 
     //Login
 
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
 
-            if ($usuario['password'] === $pass) {
+            if (password_verify($pass, $usuario['password'])) {
                 // Login exitoso: guardar en sesión
                 $_SESSION['id_usuario'] = $usuario['id_usuario'];
                 $_SESSION['rol'] = $usuario['rol'];
