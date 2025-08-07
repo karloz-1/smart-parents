@@ -9,9 +9,31 @@
     // Conexion a la base de datos
     include '../config/db_config.php';
 
-    echo $_GET['id'];
-    // if (!isset($_GET[$row['id_usuario']])) {
-    //     echo "id no especificado";
-    //     exit;
-    // }
+    if (!isset($_GET['id'])) {
+        echo "id no especificado";
+        exit();
+    }
+
+    // Si se encontró id se guarda en una variable
+    $id = $_GET['id'];
+
+    // // Obtener datos del usuario
+    // $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
+    // $resultado = $conexion->query($sql);
+
+
+    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+
+    if ($resultado->num_rows == 0) {
+        echo "usuario no encontrado";
+        exit();
+    }
+
+    $usuario = $resultado->fetch_assoc();
+
+    header("Location: ../views/editar_usuarios.php?");
 ?>
