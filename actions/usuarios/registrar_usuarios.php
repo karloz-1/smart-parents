@@ -29,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         if ($stmt->execute()) {
-            header("Location: /smart-parents/views/registrar_usuarios.php?success=1");
+            header("Location: /smart-parents/views/crud/usuarios/registrar_usuarios.php?success=1");
             exit();
         } else {
-            header("Location: /smart-parents/views/registrar_usuarios.php?error=1");
+            header("Location: /smart-parents/views/crud/usuarios/registrar_usuarios.php?error=1");
             exit();
         }
     } catch (mysqli_sql_exception $e) {
-        header("Location: /smart-parents/views/registrar_usuarios.php?error=duplicado");
+        header("Location: /smart-parents/views/crud/usuarios/registrar_usuarios.php?error=duplicado");
         exit();
     }
 

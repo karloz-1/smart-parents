@@ -25,6 +25,15 @@
 
     <main>
         <h1>Crud usuarios</h1>
+        <?php
+            
+            if (isset($_GET['success'])) {
+                echo '<div class="mensaje exito">Usuario actualizado correctamente.</div>';
+            } elseif ($_GET['error'] === 1) {
+                echo '<div class="mensaje error">Hubo un error al actualizar el usuario.</div>';
+            }
+
+        ?>
         <table border="1">
             <thead>
                 <tr>
@@ -49,7 +58,7 @@
                 <?php while ($row = $resultado->fetch_assoc()) { ?>
                     <tr>
                         <td>
-                            <a href="/smart-parents/actions/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
+                            <a href="/smart-parents/views/crud/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
                             <a href="/smart-parents/actions/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
                         </td>
                         <td><?= $row['id_usuario']; ?></td>
