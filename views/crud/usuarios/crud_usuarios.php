@@ -28,9 +28,9 @@
         <?php
             
             if (isset($_GET['success'])) {
-                echo '<div class="mensaje exito">Usuario actualizado correctamente.</div>';
+                echo '<div class="mensaje exito">Usuario actualizado o eliminado correctamente.</div>';
             } elseif ($_GET['error'] === 1) {
-                echo '<div class="mensaje error">Hubo un error al actualizar el usuario.</div>';
+                echo '<div class="mensaje error">Hubo un error al actualizar o al eliminar el usuario.</div>';
             }
 
         ?>
@@ -59,7 +59,7 @@
                     <tr>
                         <td>
                             <a href="/smart-parents/views/crud/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
-                            <a href="/smart-parents/actions/usuarios/borrar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
+                            <a href="/smart-parents/views/crud/usuarios/borrar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
                         </td>
                         <td><?= $row['id_usuario']; ?></td>
                         <td><?= $row['rol']; ?></td>
