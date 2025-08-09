@@ -59,7 +59,7 @@
                     <tr>
                         <td>
                             <a href="/smart-parents/views/crud/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
-                            <a href="/smart-parents/actions/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
+                            <a href="/smart-parents/actions/usuarios/borrar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
                         </td>
                         <td><?= $row['id_usuario']; ?></td>
                         <td><?= $row['rol']; ?></td>

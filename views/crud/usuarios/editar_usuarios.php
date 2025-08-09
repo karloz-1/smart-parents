@@ -32,7 +32,8 @@
             <form action="/smart-parents/actions/usuarios/actualizar_usuarios.php" method="POST" class="form_content">
                 <div class="form_id">
                     <label for="id_usuario">Id de usuario</label>
-                    <input type="number" name="id_usuario" value="<?= $id ?>" disabled>
+                    <input type="number" value="<?= $id ?>" disabled>
+                    <input type="hidden" name="id_usuario" value="<?= $id ?>">
                 </div>
                 <div class="form_nombre1">
                     <label for="nombre1">Primer nombre</label>
