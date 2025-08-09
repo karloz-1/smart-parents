@@ -9,4 +9,5 @@
 
     // Conexión a la base de datos
     include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
+    
 ?>
