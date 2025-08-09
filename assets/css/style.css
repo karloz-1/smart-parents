@@ -11,6 +11,11 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
 main {
     margin: 25px;
 }
+hr {
+    border: none;
+    height: 1px;
+    background-color: gainsboro;
+}
 /* === VARIABLES === */
 :root {
     /* Paleta de Colores */
