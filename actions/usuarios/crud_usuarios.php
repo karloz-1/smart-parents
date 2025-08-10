@@ -10,6 +10,6 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     // Consulta
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
     $resultado = $conexion->query($sql);
 ?>
