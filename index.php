@@ -33,6 +33,8 @@ if (isset($_SESSION['id_usuario'])) {
             </div>
         </div>
         <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta"> <!-- Imagen de ilustrativa -->
+
+        <p>pruebaaa</p>
     </main>
 </body>
 </html>
