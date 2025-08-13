@@ -22,5 +22,18 @@
 </head>
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/dashboard_header.php'; ?>
+    <div class="form_title">
+        <h1>Registrar eventos</h1>
+    </div>
+    <div class="form">
+        <form action="/smart-parents/actions/eventos/registrar_eventos.php" method="POST">
+            <div class="form_tipo_evento">
+                <label for="tipo_de_evento">Tipo de evento</label>
+                <select name="tipo_evento">
+                    <option value=""></option>
+                </select>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
