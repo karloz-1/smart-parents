@@ -36,6 +36,7 @@ if (isset($_SESSION['id_usuario'])) {
 
         <p>pruebaaa</p>
         <h1>holaaa</h1>
+        <h2>jjgjg</h2>
     </main>
 </body>
 </html>
