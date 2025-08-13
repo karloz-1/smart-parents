@@ -47,7 +47,7 @@
                         <p>Acceder al CRUD completo de todos los eventos. Usted podrá acceder a todo el contenido de la base de datos (eventos) ademas de poder crear, leer, actualizar y eliminar eventos.</p>
                     </div>
                     <div class="card_button">
-                        <a href="" class="btn_primary">Ingresar</a>
+                        <a href="/smart-parents/views/crud/eventos/crud_eventos.php" class="btn_primary">Ingresar</a>
                     </div>
                 </div>
             </div>
