@@ -23,7 +23,7 @@ CREATE TABLE usuarios (
 CREATE TABLE eventos (
     id_evento INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
-    tipo_evento ENUM('llegada_tarde', 'llamado', 'anotacion', 'falta', 'comentario') NOT NULL,
+    tipo_evento ENUM('llegada_tarde', 'anotacion', 'inasistencia', 'comentario') NOT NULL,
     descripcion TEXT,
     registrado_por INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
