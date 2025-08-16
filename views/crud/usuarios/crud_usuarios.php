@@ -34,7 +34,7 @@
             }
 
         ?>
-        <table border="1" class="tabla">
+        <table class="tabla">
             <thead>
                 <tr>
                     <th></th>

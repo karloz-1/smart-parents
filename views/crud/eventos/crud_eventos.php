@@ -24,7 +24,54 @@
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/dashboard_header.php'; ?>
 
     <main>
-        
+        <h1>Crud eventos</h1>
+        <?php
+            
+            if (isset($_GET['success'])) {
+                echo '<div class="mensaje exito">Usuario actualizado o eliminado correctamente.</div>';
+            } elseif ($_GET['error'] === 1) {
+                echo '<div class="mensaje error">Hubo un error al actualizar o al eliminar el usuario.</div>';
+            }
+
+        ?>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Usuario del evento</th>
+                    <th>Tipo de evento</th>
+                    <th>Descripción</th>
+                    <th>Registrado por</th>
+                    <th>Creado</th>
+                    <th>Actualizado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/eventos/crud_eventos.php'; ?>
+                <?php while ($row = $resultado->fetch_assoc()) { ?>
+                    <tr>
+                        <td>
+                            <a href="/smart-parents/views/crud/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
+                            <a href="/smart-parents/views/crud/usuarios/borrar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
+                        </td>
+                        <td><?= $row['id_evento']; ?></td>
+                        <td>
+                            Id: <?= $row['id_u1']; ?> <br>
+                            Nombre: <?= $row['nombre1_u1'] . " ". $row['nombre2_u1'] . " ". $row['apellido1_u1'] . " ". $row['apellido2_u1']; ?>
+                        </td>
+                        <td><?= $row['tipo_evento']; ?></td>
+                        <td><?= $row['descripcion']; ?></td>
+                        <td>
+                            Id: <?= $row['registrado_por']; ?> <br>
+                            Nombre: <?= $row['nombre1_u2'] . " ". $row['nombre2_u2'] . " ". $row['apellido1_u2'] . " ". $row['apellido2_u2']; ?>
+                        </td>
+                        <td><?= $row['created_at']; ?></td>
+                        <td><?= $row['update_at']; ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </main>
     
 </body>
