@@ -17,7 +17,6 @@
         $apellido1 = $usuario["apellido1"];
         $apellido2 = $usuario["apellido2"];
         $nombreCompleto = $nombre1 . " " . $nombre2 . " " . $apellido1 . " " . $apellido2;
-        echo $nombreCompleto;
     } else {
         echo "No se encontraron datos.";
     }
