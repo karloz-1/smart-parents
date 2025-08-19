@@ -52,8 +52,8 @@
                 <?php while ($row = $resultado->fetch_assoc()) { ?>
                     <tr>
                         <td>
-                            <a href="/smart-parents/views/crud/usuarios/editar_usuarios.php?id=<?=$row['id_usuario']?>">Editar</a>
-                            <a href="/smart-parents/views/crud/usuarios/borrar_usuarios.php?id=<?=$row['id_usuario']?>">Borrar</a>
+                            <a href="/smart-parents/views/crud/eventos/editar_eventos.php?id=<?=$row['id_evento']?>">Editar</a>
+                            <a href="/smart-parents/views/crud/eventos/borrar_eventos.php?id=<?=$row['id_evento']?>">Borrar</a>
                         </td>
                         <td><?= $row['id_evento']; ?></td>
                         <td>
