@@ -24,5 +24,6 @@
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/dashboard_header.php'; ?>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/dashboard/dashboard.php'; ?>
+    <p><?= $nombreCompleto; ?></p>
 </body>
 </html>
