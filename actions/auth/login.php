@@ -1,6 +1,5 @@
 <?php
 
-    session_start();
     include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
