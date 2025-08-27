@@ -66,7 +66,7 @@
             
             if (isset($_GET['success'])) {
                 echo '<div class="mensaje exito">Evento registrado correctamente.</div>';
-            } elseif ($_GET['error'] === 1) {
+            } elseif (isset($_GET['error']) === 1) {
                 echo '<div class="mensaje error">Hubo un error al registrar el evento.</div>';
             }
 
