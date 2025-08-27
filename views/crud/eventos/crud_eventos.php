@@ -29,7 +29,7 @@
             
             if (isset($_GET['success'])) {
                 echo '<div class="mensaje exito">Usuario actualizado o eliminado correctamente.</div>';
-            } elseif ($_GET['error'] === 1) {
+            } elseif (isset($_GET['error']) === 1) {
                 echo '<div class="mensaje error">Hubo un error al actualizar o al eliminar el usuario.</div>';
             }
 
