@@ -89,9 +89,9 @@
             <?php
                 if (isset($_GET['success'])) {
                     echo '<div class="mensaje exito">Usuario registrado correctamente.</div>';
-                } elseif (isset($_GET['error']) && trim($_GET['error']) === "1") {
+                } elseif ($_GET['error'] === "1") {
                     echo '<div class="mensaje error">Hubo un error al registrar el usuario.</div>';
-                } elseif (isset($_GET['error']) && strtolower(trim($_GET['error'])) === "duplicado") {
+                } elseif ($_GET['error'] === "duplicado") {
                     echo '<div class="mensaje error">El usuario ya existe (identificación o correo repetido).</div>';
                 }
             ?>
