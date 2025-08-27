@@ -1,5 +1,4 @@
 <?php
-    session_start();
     // Verifica que el usuario sea administrador
     if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'administrador') {
         echo "Acceso denegado.";
