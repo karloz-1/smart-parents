@@ -1,7 +1,6 @@
 <?php
 
     // Incluye la conexion a la db
-    session_start();
     include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
     // Consulta
