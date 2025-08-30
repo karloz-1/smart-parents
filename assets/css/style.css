@@ -60,6 +60,14 @@ hr {
         font-size: 20px;
         color: var(--color-text-base);
     }
+    .bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        color: var(--color-text-base);
+        line-height: 30px;
+        font-size: 20px;
+    }
 /* === TEXTO === */
 
 /* === BOTONES === */
