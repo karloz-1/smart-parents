@@ -34,5 +34,6 @@ if (isset($_SESSION['id_usuario'])) {
         </div>
         <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta"> <!-- Imagen de ilustrativa -->
     </main>
+    <h1>prueba de comandos de git</h1>
 </body>
 </html>
