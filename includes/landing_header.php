@@ -11,7 +11,7 @@
             </ul>
         </nav>
         <div class="header_nav_login">  <!-- Contenedor del boton de iniciar sesión -->
-            <a href="views/auth/login.php" class="btn_secundary">Iniciar Sesión</a>  <!-- Botón para ir a la pagina de iniciar sesión -->
+            <a href="/smart-parents/views/auth/login.php" class="btn_secundary">Iniciar Sesión</a>  <!-- Botón para ir a la pagina de iniciar sesión -->
         </div>
     </header>'
 ?>
