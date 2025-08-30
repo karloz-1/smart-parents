@@ -34,12 +34,5 @@ if (isset($_SESSION['id_usuario'])) {
         </div>
         <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta"> <!-- Imagen de ilustrativa -->
     </main>
-<<<<<<< HEAD
-=======
-    <h1>prueba de comandos de git</h1>
-    <h2>hollaaaaaa</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia deleniti blanditiis voluptates, eveniet aperiam, totam beatae nobis quasi atque alias, vitae non eaque ducimus iure dolorem nostrum placeat officiis earum!</p>
-    <p>holii</p>
->>>>>>> parent of b54c136 (commmita)
 </body>
 </html>
