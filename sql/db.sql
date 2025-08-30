@@ -40,7 +40,8 @@ CREATE TABLE eventos (
     (3, 'administrador', '0000000002', 'Jhonatan', 'David', 'Londoño', 'Muñoz', 'jhonatan@gmail.com', '0000000002', '$2y$10$EA5YKcHgiH1zu7LZhCalJeULU00zdBEpF0T.sqbmhX3rDPIJBcGqm', 'Administración', '2025-08-19 21:23:34', '2025-08-19 21:23:34'),
     (4, 'administrador', '0000000003', 'Salome', '', 'Patiño', 'Escobar', 'salome@gmail.com', '0000000003', '$2y$10$6CZHwM50Tyr4O7ZQyrkdJuCsCcFJtGls/jgIyxxKixCyRNW0.eTo.', 'Administración', '2025-08-19 21:27:13', '2025-08-19 21:27:13'),
     (5, 'administrador', '0000000004', 'Juan', 'Jose', 'Tabares', 'Villa', 'Juan@gmail.com', '0000000004', '$2y$10$cHQRo.m3ZPMWEjMVZW.yqOlWAI1sGqJqH7hiADsU8Rdp.zZtSio7S', 'Administración', '2025-08-19 21:29:17', '2025-08-19 21:29:17'),
-    (6, 'administrador', '0000000005', 'Lauren', 'Cristina', 'Villadiego', 'Ortega', 'lauren@gmail.com', '0000000005', '$2y$10$M9muVzGQ3n3uDBIFoUE8z.MVpIixX5E5kC5wRXdoN2mxqfETKzVbK', 'Administración', '2025-08-19 21:30:41', '2025-08-19 21:30:41');
+    (6, 'administrador', '0000000005', 'Lauren', 'Cristina', 'Villadiego', 'Ortega', 'lauren@gmail.com', '0000000005', '$2y$10$M9muVzGQ3n3uDBIFoUE8z.MVpIixX5E5kC5wRXdoN2mxqfETKzVbK', 'Administración', '2025-08-19 21:30:41', '2025-08-19 21:30:41'),
+    (7, 'estudiante', '1122334455', 'test', '', 'user', '', 'test@test.com', '1122334455', '$2y$10$WM5qJQSgwc/27jHpznwqke3JHAXcRvzgQPjdPTIbgW4Oj/pfdVKeq', NULL, '2025-08-30 18:08:07', '2025-08-30 18:08:07');
 
     -- EVENTOS --
     INSERT INTO `eventos` (`id_evento`, `id_usuario`, `tipo_evento`, `descripcion`, `registrado_por`, `created_at`, `updated_at`) VALUES
