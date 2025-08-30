@@ -1,11 +1,10 @@
 <?php
     session_start();
-
+    // Verifica que el usuario exista
     if (!isset($_SESSION['id_usuario'])) {
-        header("Location: auth/login.php");
+        header("Location: /smart-parents/views/errors/401.php");
         exit();
     }
-
     $id_usuario = $_SESSION['id_usuario'];
     $rol = $_SESSION['rol'];
 ?>
