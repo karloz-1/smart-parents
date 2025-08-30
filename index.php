@@ -1,10 +1,9 @@
 <?php
-/* include 'actions/auth/login.php'; */
-session_start();
-if (isset($_SESSION['id_usuario'])) {
-    header("Location: views/dashboard.php"); // Redirige si ya está logueado
-    exit();
-}
+    session_start();
+    if (isset($_SESSION['id_usuario'])) {
+        header("Location: views/dashboard.php"); // Redirige si ya está logueado
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
