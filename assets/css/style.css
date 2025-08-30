@@ -97,6 +97,18 @@ hr {
     a:hover {
         color: var(--color-text-btn-hover);
     }
+    .a-reverse {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--color-text-btn-hover);
+        font-size: 20px;
+        transition: color 0.2s ease;
+    }
+    .a-reverse:hover {
+        color: var(--color-heading);
+    }
     button {
         text-decoration: none;
         font-family: "Poppins", sans-serif;
