@@ -12,7 +12,7 @@
 
         MODO DE USO:
             Primero se enlaza este archivo de configuración para que los enlaces funcionen correctamente. (esto solo se hace una vez al principio de cada archivo)
-            <?php include_once BASE_PATH . 'config/config.php'; ?>
+            <?php include_once __DIR__ . '/config/config.php'; ?>
 
             BASE_URL (EJEMPLOS)
                 <link rel="stylesheet" href="<?= BASE_URL; ?>assets/css/style.css">
