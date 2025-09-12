@@ -61,14 +61,18 @@
                         </td>
                         <td><?= $row['id_evento']; ?></td>
                         <td>
-                            Id: <?= $row['id_u1']; ?> <br>
-                            Nombre: <?= $row['nombre1_u1'] . " ". $row['nombre2_u1'] . " ". $row['apellido1_u1'] . " ". $row['apellido2_u1']; ?>
+                            Id: <?= $row['id_u1']; ?>
+                            <hr>
+                            Nombre: <br>
+                            <?= $row['nombre1_u1'] . " ". $row['nombre2_u1'] . " ". $row['apellido1_u1'] . " ". $row['apellido2_u1']; ?>
                         </td>
                         <td><?= $row['tipo_evento']; ?></td>
                         <td><?= $row['descripcion']; ?></td>
                         <td>
-                            Id: <?= $row['registrado_por']; ?> <br>
-                            Nombre: <?= $row['nombre1_u2'] . " ". $row['nombre2_u2'] . " ". $row['apellido1_u2'] . " ". $row['apellido2_u2']; ?>
+                            Id: <?= $row['registrado_por']; ?>
+                            <hr>
+                            Nombre: <br>
+                            <?= $row['nombre1_u2'] . " ". $row['nombre2_u2'] . " ". $row['apellido1_u2'] . " ". $row['apellido2_u2']; ?>
                         </td>
                         <td><?= $row['created_at']; ?></td>
                         <td><?= $row['update_at']; ?></td>
