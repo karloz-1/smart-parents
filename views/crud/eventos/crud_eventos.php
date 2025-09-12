@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crud usuarios</title>
+    <title>Crud eventos</title>
     <link rel="stylesheet" href="/smart-parents/assets/css/style.css"> <!-- Vincula el css principal -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Conecta la fuente -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <!-- Conecta la fuente -->
@@ -32,9 +32,9 @@
         <?php
             
             if (isset($_GET['success'])) {
-                echo '<div class="mensaje exito">Usuario actualizado o eliminado correctamente.</div>';
+                echo '<div class="mensaje exito">Evento actualizado o eliminado correctamente.</div>';
             } elseif (isset($_GET['error']) === 1) {
-                echo '<div class="mensaje error">Hubo un error al actualizar o al eliminar el usuario.</div>';
+                echo '<div class="mensaje error">Hubo un error al actualizar o al eliminar el evento.</div>';
             }
 
         ?>

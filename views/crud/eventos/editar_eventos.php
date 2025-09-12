@@ -28,55 +28,47 @@
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/dashboard_header.php'; ?>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/dashboard/dashboard.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/eventos/editar_eventos.php'; ?>
     <main>
         <div class="form_title">
             <h1>Editar eventos</h1>
         </div>
         <div class="form">
-            <form action="/smart-parents/actions/eventos/registrar_eventos.php" method="POST" class="form_content">
+            <form action="/smart-parents/actions/eventos/actualizar_eventos.php" method="POST" class="form_content">
+                <div class="form_id_evento">
+                    <label for="id_evento">Id del evento</label>
+                    <input type="number" value="<?= $id ?>" disabled>
+                    <input type="hidden" name="id_evento" value="<?= $id ?>">
+                </div>
                 <div class="form_tipo_de_evento">
                     <label for="tipo_de_evento">Tipo de evento</label>
                     <select name="tipo_de_evento" required>
-                        <option value="llegada_tarde">Llegada tarde</option>
-                        <option value="anotacion">Anotacion</option>
-                        <option value="inasistencia">Inasistencia</option>
-                        <option value="comentario">Comentario</option>
+                        <option value="llegada_tarde" <?php if ($evento['tipo_evento'] == "llegada_tarde") { echo 'selected="selected"'; } ?>>Llegada tarde</option>
+                        <option value="anotacion" <?php if ($evento['tipo_evento'] == "anotacion") { echo 'selected="selected"'; } ?>>Anotacion</option>
+                        <option value="inasistencia" <?php if ($evento['tipo_evento'] == "inasistencia") { echo 'selected="selected"'; } ?>>Inasistencia</option>
+                        <option value="comentario" <?php if ($evento['tipo_evento'] == "comentario") { echo 'selected="selected"'; } ?>>Comentario</option>
                     </select>
                 </div>
                 <div class="form_usuario">
                     <label for="usuario_del_evento">Usuario del evento</label>
-                    <select name="usuario_del_evento" required>
-                        <option value="">Selecione un usuario</option>
-                        <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/usuarios/crud_usuarios.php'; ?>
-                        <?php while ($row = $resultado->fetch_assoc()) { ?>
-                            <option value="<?= $row['id_usuario']; ?>"><?= $row['nombre1'] . " " . $row['nombre2'] . " " . $row['apellido1'] . " " . $row['apellido2']; ?></option>
-                        <?php } ?>
-                    </select>
+
+                    <input type="hidden" name="usuario_del_evento" value="<?= $evento['id_u1'] ?>" required>
+                    <input type="text" value="<?= $evento['nombre1_u1'] . " ". $evento['nombre2_u1'] . " ". $evento['apellido1_u1'] . " ". $evento['apellido2_u1']; ?>" disabled>
                 </div>
                 <div class="form_descripcion">
                     <label for="descripcion_del_evento">Descripción del evento</label>
-                    <textarea name="descripcion_del_evento" rows="4" required></textarea>
+                    <textarea name="descripcion_del_evento" rows="4" required><?= $evento['descripcion'] ?></textarea>
                 </div>
                 <div class="form_registrado_por">
                     <label for="registrado_por">Registrado por</label>
-                    <input type="hidden" name="registrado_por" value="<?= $_SESSION['id_usuario'] ?>">
-                    <input type="text" value="<?= $nombreCompleto; ?>" disabled>
+                    <input type="hidden" name="registrado_por" value="<?= $evento['registrado_por'] ?>" required>
+                    <input type="text" value="<?= $evento['nombre1_u2'] . " ". $evento['nombre2_u2'] . " ". $evento['apellido1_u2'] . " ". $evento['apellido2_u2']; ?>" disabled>
                 </div>
                 <div class="form_submit">
-                    <button type="submit" name="submit_btn">Registrar</button>
+                    <button type="submit" name="submit_btn">Editar</button>
                 </div>
             </form>
-            <?php
-            
-            if (isset($_GET['success'])) {
-                echo '<div class="mensaje exito">Evento registrado correctamente.</div>';
-            } elseif ($_GET['error'] === 1) {
-                echo '<div class="mensaje error">Hubo un error al registrar el evento.</div>';
-            }
-
-            ?>
         </div>
     </main>
-    
 </body>
 </html>
