@@ -2,10 +2,12 @@
 
     // Incluye la conexion a la db
     include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
-
+    
     // Consulta
-    $sql = "SELECT nombre1, nombre2, apellido1, apellido2 FROM usuarios WHERE id_usuario = $id_usuario";
-    $resultado = $conexion->query($sql);
+    $stmt = $conexion->prepare("SELECT nombre1, nombre2, apellido1, apellido2 FROM usuarios WHERE id_usuario = ?");
+        $stmt->bind_param("i", $id_usuario);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
 
     // Resultado
     if ($resultado->num_rows === 1) {
@@ -21,6 +23,7 @@
     }
 
     // 4. Cerrar conexión
+    $stmt->close();
     $conexion->close();
 
 ?>
