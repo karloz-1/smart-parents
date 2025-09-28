@@ -11,77 +11,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- Conecta la fuente -->
 </head>
 <body>
-    <pre>
-JUAN = 1
-LAUREN = 2
-JHONATAN = 3
-SALOME = 4
-CARLOS = 5
-TODOS = 0
-.
-├── actions-------------------------------------------Backend de la pagina, se encarga de la logica de la pagina, base de datos, etc.
-│   ├── auth------------------------------------------Autenticación
-│   │   ├── login.php---------------------------------Jhonatan(3) | Login. Procesa el formulario de login para acceder a la pagina.
-│   │   └── logout.php--------------------------------Jhonatan(3) | Logout. Cierra la sesión.
-│   ├── dashboard-------------------------------------Backend del dashboard (pagina principal donde aparecen las notas).
-│   │   ├── dashboard_cards.php-----------------------Carlos(5) | Consulta a la base de datos para mostrar las tarjetas con los eventos.
-│   │   └── dashboard.php-----------------------------Carlos(5) | Consulta a la base de datos para mostrar el nombre del usuario que accede.
-│   ├── eventos---------------------------------------Backend de los procesos relacionados con los usuarios
-│   │   ├── actualizar_eventos.php--------------------Jhonatan(3) | Procesa el formulario y hace una consulta a la base de datos para actualizar la información del evento deseado.
-│   │   ├── borrar_eventos.php------------------------Juan(1) | Procesa el formulario y elimina el evento deseado.
-│   │   ├── crud_eventos.php--------------------------Carlos(5) | Consulta a la base de datos para mostrar toda la información relacionada con los eventos, para mostrarlos en la tabla de todos los eventos.
-│   │   ├── editar_eventos.php------------------------Lauren(2) | Consulta a la base de datos la informacion del evento deseado, para que cuando le des al boton de editar evento ya este puesta toda la informacion de forma predeterminada.
-│   │   └── registrar_eventos.php---------------------Salome(4) | Procesa el formulario e inserta la formación recogida a la base de datos.
-│   └── usuarios--------------------------------------Backend de los procesos relacionados con los usuarios
-│       ├── actualizar_usuarios.php-------------------Carlos(5) | Procesa el formulario y hace una consulta a la base de datos para actualizar la información del usuario deseado.
-│       ├── borrar_usuarios.php-----------------------Salome(4) | Procesa el formulario y elimina el usuario deseado. 
-│       ├── crud_usuarios.php-------------------------Lauren(2) | Consulta a la base de datos para mostrar la tabla con todos los usuarios.
-│       ├── editar_usuarios.php-----------------------Jhonatan(3) | Consulta a la base de datos la informacion del usuario deseado, para que cuando le des al boton de editar usuario ya este puesta toda la informacion de forma predeterminada.
-│       └── registrar_usuarios.php--------------------Juan(1) | Procesa el formulario e inserta la formación recogida a la base de datos.
-├── assets--------------------------------------------Recursos de la pagina (imagenes, videos, css, etc).
-│   ├── css-------------------------------------------Estilos usados en la pagina.
-│   │   ├── 4xx.css-----------------------------------Juan(1) | Estilos de las paginas de error.
-│   │   ├── admin.css---------------------------------Lauren(2) | Estilos de la pagina de administrador.
-│   │   ├── borrar_usuarios.css-----------------------Salome(4), Juan(1) | Estilos de la pagina de borrar usuarios. (Este mismo estilo se reutiliza en la pagina de borrar eventos).
-│   │   ├── index.css---------------------------------Salome(4) | Estilos de la pagina de inicio.
-│   │   ├── login.css---------------------------------Jhonatan(3) | Estilos del la pagina de login.
-│   │   ├── registrar_eventos.css---------------------Salome(4) | Estilos de la pagina de registrar eventos.
-│   │   ├── registrar_usuarios.css--------------------Juan(1) | Estilos del la pagina de registrar eventos.
-│   │   └── style.css---------------------------------Todos(0) | Estilo general para todo el sitio web, para que haya coherencia. (de estos estilos todos deben de tener idea, pero yo (Carlos) soy el que la va exponer).
-│   ├── img-------------------------------------------Carpeta con todas las imagenes empleadas.
-│   │   └── id_card.svg-------------------------------Salome(4) | La unica imagen de toda la pagina jajja, como tal eso no creo que se exponga pero como a salito le toca la pagina donde esta esa imagen, pues esta bien que sepa donde está.
-│   └── js--------------------------------------------Carpeta de JavaScript, como no usamos JS pues no es importante.
-├── config--------------------------------------------Carpeta con los archivos de configuracion de la pagina.
-│   └── db_config.php---------------------------------Todos(0) | Archivo que contiene la conexión a la base de datos, es importante que le hechen un vistazo ya que todos trabajamos con base de datos, asi que es importante que tengan nocion de como se conecta. (no creo que esto lo tengamos que exponer pero si algo preguntan por esto, responde el que este exponiendo en ese momento).
-├── includes------------------------------------------Carpeta con codigo reutilizable.
-│   ├── dashboard_header.php--------------------------Todos(0) | codigo del header de la pagina principal (inicio, registrar eventos, etc). | como este header lo tienen todas las paginas pues está cool que sepan como esta programado. en caso tal de que a alguno le pregunten por ese header responde el que esté exponiendo en ese momento.
-│   └── landing_header.php----------------------------Todos(0) | Es basicamento lo mismo que el header del dashboard. (Solo es tener como noción de como esta hecho)
-├── index.php-----------------------------------------Salome(4) | Pagina de inicio del sitio web.
-├── README.md-----------------------------------------Este archivo lo genera github y es el texto que se muestra en la pagina del gatico. Nada importante para el sitio web.
-├── sql-----------------------------------------------Carpeta relacionada con base de datos.
-│   └── db.sql----------------------------------------Todos(0) | Codigo SQL de la base de datos, es importante que todos tengan idea de este codigo ya que todos trabajamos con base de datos, asi que es importante saber como es la infraestructura de lo que manejamos.
-└── views---------------------------------------------Frontend. Como tal son las paginas que el usuario puede ver.
-    ├── auth------------------------------------------Autenticación.
-    │   └── login.php---------------------------------Jhonatan(3) | Pagina que tiene el formulario de login.
-    ├── crud------------------------------------------Frontend de las paginas relacionadas con el CRUD (Create, Read, Update, Delete) - (Crear, Leer, Actualizar y Borrar).
-    │   ├── admin.php---------------------------------Lauren(2) | Pagina con las 2 tarjetas para accder al crud de usuarios o de eventos.
-    │   ├── eventos-----------------------------------Frontend de las paginas relacionadas con el crud de eventos.
-    │   │   ├── borrar_eventos.php--------------------Juan(1) | Pagina con el formulario de borrar eventos.
-    │   │   ├── crud_eventos.php----------------------Carlos(5) | Pagina con la tabla de todos los eventos.
-    │   │   ├── editar_eventos.php--------------------Lauren(2) | Pagina con el formulario de editar eventos.
-    │   │   └── registrar_eventos.php-----------------Salome(4) | Pagina con el formulario de registrar eventos.
-    │   └── usuarios----------------------------------Frontend de las paginas relacionadas con el crud de usuarios.
-    │       ├── borrar_usuarios.php-------------------Salome(4) | Pagina con el formulario de borra usuarios.
-    │       ├── crud_usuarios.php---------------------Lauren(2) | Pagina con la tabla de todos los usuarios.
-    │       ├── editar_usuarios.php-------------------Jhonatan(3) | Pagina con el formulario para editar usuarios.
-    │       └── registrar_usuarios.php----------------Juan(1) | Pagina con el formulario de registrar usuarios.
-    ├── dashboard.php---------------------------------Carlos(5) | Pagina principal del sitio web, la cual muestra todas las notas asociadas al usuario que inció sesión.
-    ├── errors----------------------------------------Pagina de errores
-    │   ├── 401.php-----------------------------------Juan(1) | 401 - Acceso restringido. Se muestra cuando un usuario que no ha iniciado sesión intenta acceder a una pagina restringida del sitio web.
-    │   └── 403.php-----------------------------------Juan(1) | 403 - Permiso denegado. Se muestra cuando un usuario intenta accder a una pagina la cual no tienen permitido accder ya que su rol no está autorizado para ingresar.
-    └── public----------------------------------------Paginas publicas, no se necesita iniciar sesión.
-        └── informacion.html--------------------------Carlos(5) | Simplemente una pagina informativa del proyecto.
 
-    </pre>
+
+
+<pre>
+    <style>
+        pre {
+        background: #1e1e2e;          /* Fondo oscuro elegante */
+        color: #cdd6f4;              /* Texto claro */
+        font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 16px;
+        border-radius: 10px;
+        overflow-x: auto;            /* Scroll si se desborda */
+        word-break: break-word;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        border: 1px solid #313244;
+        }
+
+        /* Colorear usuarios */
+        pre .juan      { color: #f38ba8; font-weight: bold; }   /* rojo rosado */
+        pre .lauren    { color: #fab387; font-weight: bold; }   /* naranja */
+        pre .jhonatan  { color: #89b4fa; font-weight: bold; }   /* azul */
+        pre .salome    { color: #a6e3a1; font-weight: bold; }   /* verde */
+        pre .carlos    { color: #f9e2af; font-weight: bold; }   /* amarillo */
+        pre .todos     { color: #cba6f7; font-weight: bold; }   /* violeta */
+    </style>
+<span class="juan">JUAN = 1</span>
+<span class="lauren">LAUREN = 2</span>
+<span class="jhonatan">JHONATAN = 3</span>
+<span class="salome">SALOME = 4</span>
+<span class="carlos">CARLOS = 5</span>
+<span class="todos">TODOS = 0</span>
+.
+├── actions--------------------------------------Backend de la pagina, se encarga de la logica de la pagina, base de datos, etc.
+│   ├── auth-------------------------------------Autenticación
+│   │   ├── login.php---------------------------------<span class="jhonatan">Jhonatan(3)</span> | Login. Procesa el formulario de login para acceder a la pagina.
+│   │   └── logout.php--------------------------------<span class="jhonatan">Jhonatan(3)</span> | Logout. Cierra la sesión.
+│   ├── dashboard--------------------------------Backend del dashboard (pagina principal donde aparecen las notas).
+│   │   ├── dashboard_cards.php-----------------------<span class="carlos">Carlos(5)</span> | Consulta a la base de datos para mostrar las tarjetas con los eventos.
+│   │   └── dashboard.php-----------------------------<span class="carlos">Carlos(5)</span> | Consulta a la base de datos para mostrar el nombre del usuario que accede.
+│   ├── eventos----------------------------------Backend de los procesos relacionados con los usuarios
+│   │   ├── actualizar_eventos.php--------------------<span class="jhonatan">Jhonatan(3)</span> | Procesa el formulario y hace una consulta a la base de datos para actualizar la información del evento deseado.
+│   │   ├── borrar_eventos.php------------------------<span class="juan">Juan(1)</span> | Procesa el formulario y elimina el evento deseado.
+│   │   ├── crud_eventos.php--------------------------<span class="carlos">Carlos(5)</span> | Consulta a la base de datos para mostrar toda la información relacionada con los eventos, para mostrarlos en la tabla de todos los eventos.
+│   │   ├── editar_eventos.php------------------------<span class="lauren">Lauren(2)</span> | Consulta a la base de datos la informacion del evento deseado, para que cuando le des al boton de editar evento ya este puesta toda la informacion de forma predeterminada.
+│   │   └── registrar_eventos.php---------------------<span class="salome">Salome(4)</span> | Procesa el formulario e inserta la formación recogida a la base de datos.
+│   └── usuarios---------------------------------Backend de los procesos relacionados con los usuarios
+│       ├── actualizar_usuarios.php-------------------<span class="carlos">Carlos(5)</span> | Procesa el formulario y hace una consulta a la base de datos para actualizar la información del usuario deseado.
+│       ├── borrar_usuarios.php-----------------------<span class="salome">Salome(4)</span> | Procesa el formulario y elimina el usuario deseado. 
+│       ├── crud_usuarios.php-------------------------<span class="lauren">Lauren(2)</span> | Consulta a la base de datos para mostrar la tabla con todos los usuarios.
+│       ├── editar_usuarios.php-----------------------<span class="jhonatan">Jhonatan(3)</span> | Consulta a la base de datos la informacion del usuario deseado, para que cuando le des al boton de editar usuario ya este puesta toda la informacion de forma predeterminada.
+│       └── registrar_usuarios.php--------------------<span class="juan">Juan(1)</span> | Procesa el formulario e inserta la formación recogida a la base de datos.
+├── assets---------------------------------------Recursos de la pagina (imagenes, videos, css, etc).
+│   ├── css--------------------------------------Estilos usados en la pagina.
+│   │   ├── 4xx.css-----------------------------------<span class="juan">Juan(1)</span> | Estilos de las paginas de error.
+│   │   ├── admin.css---------------------------------<span class="lauren">Lauren(2)</span> | Estilos de la pagina de administrador.
+│   │   ├── borrar_usuarios.css-----------------------<span class="salome">Salome(4)</span>, <span class="juan">Juan(1)</span> | Estilos de la pagina de borrar usuarios. (Este mismo estilo se reutiliza en la pagina de borrar eventos).
+│   │   ├── index.css---------------------------------<span class="salome">Salome(4)</span> | Estilos de la pagina de inicio.
+│   │   ├── login.css---------------------------------<span class="jhonatan">Jhonatan(3)</span> | Estilos del la pagina de login.
+│   │   ├── registrar_eventos.css---------------------<span class="salome">Salome(4)</span> | Estilos de la pagina de registrar eventos.
+│   │   ├── registrar_usuarios.css--------------------<span class="juan">Juan(1)</span> | Estilos del la pagina de registrar eventos.
+│   │   └── style.css---------------------------------<span class="todos">Todos(0)</span> | Estilo general para todo el sitio web, para que haya coherencia. (de estos estilos todos deben de tener idea, pero yo (Carlos) soy el que la va exponer).
+│   ├── img--------------------------------------Carpeta con todas las imagenes empleadas.
+│   │   └── id_card.svg-------------------------------<span class="salome">Salome(4)</span> | La unica imagen de toda la pagina jajja, como tal eso no creo que se exponga pero como a salito le toca la pagina donde esta esa imagen, pues esta bien que sepa donde está.
+│   └── js---------------------------------------Carpeta de JavaScript, como no usamos JS pues no es importante.
+├── config---------------------------------------Carpeta con los archivos de configuracion de la pagina.
+│   └── db_config.php---------------------------------<span class="todos">Todos(0)</span> | Archivo que contiene la conexión a la base de datos, es importante que le hechen un vistazo ya que todos trabajamos con base de datos, asi que es importante que tengan nocion de como se conecta. (no creo que esto lo tengamos que exponer pero si algo preguntan por esto, responde el que este exponiendo en ese momento).
+├── includes-------------------------------------Carpeta con codigo reutilizable.
+│   ├── dashboard_header.php--------------------------<span class="todos">Todos(0)</span> | codigo del header de la pagina principal (inicio, registrar eventos, etc). | como este header lo tienen todas las paginas pues está cool que sepan como esta programado. en caso tal de que a alguno le pregunten por ese header responde el que esté exponiendo en ese momento.
+│   └── landing_header.php----------------------------<span class="todos">Todos(0)</span> | Es basicamento lo mismo que el header del dashboard. (Solo es tener como noción de como esta hecho)
+├── index.php-----------------------------------------<span class="salome">Salome(4)</span> | Pagina de inicio del sitio web.
+├── README.md-----------------------------------------Este archivo lo genera github y es el texto que se muestra en la pagina del gatico. Nada importante para el sitio web.
+├── sql------------------------------------------Carpeta relacionada con base de datos.
+│   └── db.sql----------------------------------------<span class="todos">Todos(0)</span> | Codigo SQL de la base de datos, es importante que todos tengan idea de este codigo ya que todos trabajamos con base de datos, asi que es importante saber como es la infraestructura de lo que manejamos.
+└── views----------------------------------------Frontend. Como tal son las paginas que el usuario puede ver.
+    ├── auth-------------------------------------Autenticación.
+    │   └── login.php---------------------------------<span class="jhonatan">Jhonatan(3)</span> | Pagina que tiene el formulario de login.
+    ├── crud-------------------------------------Frontend de las paginas relacionadas con el CRUD (Create, Read, Update, Delete) - (Crear, Leer, Actualizar y Borrar).
+    │   ├── admin.php---------------------------------<span class="lauren">Lauren(2)</span> | Pagina con las 2 tarjetas para accder al crud de usuarios o de eventos.
+    │   ├── eventos------------------------------Frontend de las paginas relacionadas con el crud de eventos.
+    │   │   ├── borrar_eventos.php--------------------<span class="juan">Juan(1)</span> | Pagina con el formulario de borrar eventos.
+    │   │   ├── crud_eventos.php----------------------<span class="carlos">Carlos(5)</span> | Pagina con la tabla de todos los eventos.
+    │   │   ├── editar_eventos.php--------------------<span class="lauren">Lauren(2)</span> | Pagina con el formulario de editar eventos.
+    │   │   └── registrar_eventos.php-----------------<span class="salome">Salome(4)</span> | Pagina con el formulario de registrar eventos.
+    │   └── usuarios-----------------------------Frontend de las paginas relacionadas con el crud de usuarios.
+    │       ├── borrar_usuarios.php-------------------<span class="salome">Salome(4)</span> | Pagina con el formulario de borra usuarios.
+    │       ├── crud_usuarios.php---------------------<span class="lauren">Lauren(2)</span> | Pagina con la tabla de todos los usuarios.
+    │       ├── editar_usuarios.php-------------------<span class="jhonatan">Jhonatan(3)</span> | Pagina con el formulario para editar usuarios.
+    │       └── registrar_usuarios.php----------------<span class="juan">Juan(1)</span> | Pagina con el formulario de registrar usuarios.
+    ├── dashboard.php---------------------------------<span class="carlos">Carlos(5)</span> | Pagina principal del sitio web, la cual muestra todas las notas asociadas al usuario que inció sesión.
+    ├── errors-----------------------------------Pagina de errores
+    │   ├── 401.php-----------------------------------<span class="juan">Juan(1)</span> | 401 - Acceso restringido. Se muestra cuando un usuario que no ha iniciado sesión intenta acceder a una pagina restringida del sitio web.
+    │   └── 403.php-----------------------------------<span class="juan">Juan(1)</span> | 403 - Permiso denegado. Se muestra cuando un usuario intenta accder a una pagina la cual no tienen permitido accder ya que su rol no está autorizado para ingresar.
+    └── public-----------------------------------Paginas publicas, no se necesita iniciar sesión.
+        └── informacion.html--------------------------<span class="carlos">Carlos(5)</span> | Simplemente una pagina informativa del proyecto.    
+</pre>
 </body>
 </html>
