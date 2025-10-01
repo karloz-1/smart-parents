@@ -5,7 +5,7 @@
 .card_crud_usuarios {
     width: 600px;   /* Ancho fijo de la tarjeta */
     border-radius: 8px; /* Redondeo de bordes de 8px */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;   /* Oculta el contenido desbordado */
     background-color: var(--color-bg);
     display: flex;
@@ -16,7 +16,7 @@
 .card_crud_eventos {
     width: 600px;   /* Ancho fijo de la tarjeta */
     border-radius: 8px; /* Redondeo de bordes de 8px */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;   /* Oculta el contenido desbordado */
     background-color: var(--color-bg);
     display: flex;
