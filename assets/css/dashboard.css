@@ -39,7 +39,6 @@ main {
     overflow: hidden;   /* Oculta el contenido desbordado */
     background-color: var(--color-bg);
     margin: 40px;
-    margin-left: 120px;
 }
 
 .card_title {
