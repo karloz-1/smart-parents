@@ -1,4 +1,5 @@
 <?php
+// Se inicia la sesión
 session_start();
 if (isset($_SESSION['id_usuario'])) {
   header("Location: views/dashboard.php"); // Redirige si ya está logueado
