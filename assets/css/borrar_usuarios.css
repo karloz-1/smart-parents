@@ -1,19 +1,26 @@
 /* === VARIABLES === */
 :root {
-    /* Paleta de Colores */
-    --color-bg: #ffffff;
-    --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
-    --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
-    --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
-    --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
-    --color-text-base: #61728e; /* Color para los textos */
-    --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
-    --color-icons: #aaccfb; /* Color para las imagenes, ilustraciones, iconos, etc. */
-    --color-green: #40a02b;
-    --color-red: #d20f39;
+  /* Paleta de Colores */
+  --color-bg: #ffffff;
+  --color-header: #ddeaf8;
+  /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
+  --color-btn-primary: #00abe4;
+  /* Color para los botonoes primarios */
+  --color-btn-primary-hover: #2373ff;
+  /* Color para cuando el boton primario tiene el cursor encima */
+  --color-heading: #1e375a;
+  /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
+  --color-text-base: #61728e;
+  /* Color para los textos */
+  --color-text-btn-hover: #2364d2;
+  /* Color para el texto de un boton cuando el cursor este por arriba del boton */
+  --color-icons: #aaccfb;
+  /* Color para las imagenes, ilustraciones, iconos, etc. */
+  --color-green: #40a02b;
+  --color-red: #d20f39;
 
-    /* fonts */
-    /*
+  /* fonts */
+  /*
 
     https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
 
@@ -24,38 +31,48 @@
 
     */
 }
+
 /* === VARIABLES === */
 main {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .card_borrar_usuario {
-    width: 600px;   /* Ancho fijo de la tarjeta */
-    border-radius: 8px; /* Redondeo de bordes de 8px */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;   /* Oculta el contenido desbordado */
-    background-color: var(--color-bg);
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    padding-bottom: 15px;
+  width: 600px;
+  /* Ancho fijo de la tarjeta */
+  border-radius: 8px;
+  /* Redondeo de bordes de 8px */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  /* Oculta el contenido desbordado */
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding-bottom: 15px;
 }
+
 .card_title {
-    background-color: var(--color-header);
-    display: flex;
-    justify-content: center;
+  background-color: var(--color-header);
+  display: flex;
+  justify-content: center;
 }
+
 .card_item {
-    margin: 7px 20px;
+  margin: 7px 20px;
 }
+
 .card_button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .black {
-    color: var(--color-heading);
-    font-weight: 500;
+  color: var(--color-heading);
+  font-weight: 500;
 }
+
 hr {
-    margin: 0px 20px;
+  margin: 0px 20px;
 }
