@@ -1,34 +1,34 @@
 <?php
 
-    session_start();
-    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+session_start();
+include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        $identificacion = $_POST["user"];
-        $pass = $_POST['pass'];
+  $identificacion = $_POST["user"];
+  $pass = $_POST['pass'];
 
-        //Login
+  //Login
 
-        $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE identificacion = ?");
-            $stmt->bind_param("s", $identificacion);
-            $stmt->execute();
-            $resultado = $stmt->get_result();
+  $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE identificacion = ?");
+  $stmt->bind_param("s", $identificacion);
+  $stmt->execute();
+  $resultado = $stmt->get_result();
 
-            if ($resultado->num_rows === 1) {
-                $usuario = $resultado->fetch_assoc();
+  if ($resultado->num_rows === 1) {
+    $usuario = $resultado->fetch_assoc();
 
-                if (password_verify($pass, $usuario['password'])) {
-                    // Login exitoso: guardar en sesión
-                    $_SESSION['id_usuario'] = $usuario['id_usuario'];
-                    $_SESSION['rol'] = $usuario['rol'];
+    if (password_verify($pass, $usuario['password'])) {
+      // Login exitoso: guardar en sesión
+      $_SESSION['id_usuario'] = $usuario['id_usuario'];
+      $_SESSION['rol'] = $usuario['rol'];
 
-                    header("Location: /smart-parents/views/dashboard.php"); // Redirige al dashboard
-                    exit();
-                }
-            }
-
-            // Si falla
-            header("Location: /smart-parents/views/auth/login.php?error=1");
-            exit();
+      header("Location: /smart-parents/views/dashboard.php"); // Redirige al dashboard
+      exit();
     }
-?>
+  }
+
+  // Si falla
+  header("Location: /smart-parents/views/auth/login.php?error=1");
+  exit();
+}
+

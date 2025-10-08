@@ -4,34 +4,44 @@ ESTE ES EL ARCHIVO CSS GENERAL, PARA QUE TODO EL SITIO WEB TENGA CONSISTENCIA EN
 
 */
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
+
 main {
-    margin: 25px;
+  margin: 25px;
 }
+
 hr {
-    border: none;
-    height: 1px;
-    background-color: gainsboro;
+  border: none;
+  height: 1px;
+  background-color: gainsboro;
 }
+
 /* === VARIABLES === */
 :root {
-    /* Paleta de Colores */
-    --color-bg: #ffffff;
-    --color-header: #ddeaf8; /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
-    --color-btn-primary: #00abe4; /* Color para los botonoes primarios */
-    --color-btn-primary-hover: #2373ff; /* Color para cuando el boton primario tiene el cursor encima */
-    --color-heading: #1e375a; /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
-    --color-text-base: #61728e; /* Color para los textos */
-    --color-text-btn-hover: #2364d2; /* Color para el texto de un boton cuando el cursor este por arriba del boton */
-    --color-icons: #aaccfb; /* Color para las imagenes, ilustraciones, iconos, etc. */
-    --color-green: #40a02b;
-    --color-red: #d20f39;
+  /* Paleta de Colores */
+  --color-bg: #ffffff;
+  --color-header: #ddeaf8;
+  /* Color para el header de la pagina y alguna otra cosa que requiera un tono mas claro */
+  --color-btn-primary: #00abe4;
+  /* Color para los botonoes primarios */
+  --color-btn-primary-hover: #2373ff;
+  /* Color para cuando el boton primario tiene el cursor encima */
+  --color-heading: #1e375a;
+  /* Color para toda clase de titulos, palabras con resalte o que requieran que esten mas oscuras */
+  --color-text-base: #61728e;
+  /* Color para los textos */
+  --color-text-btn-hover: #2364d2;
+  /* Color para el texto de un boton cuando el cursor este por arriba del boton */
+  --color-icons: #aaccfb;
+  /* Color para las imagenes, ilustraciones, iconos, etc. */
+  --color-green: #40a02b;
+  --color-red: #d20f39;
 
-    /* fonts */
-    /*
+  /* fonts */
+  /*
 
     https://fonts.google.com/specimen/Poppins *SELECCIONAR EN 'Select preview text' ESCOGER LATIN PARA VER LA FUENTE CORRECTAMENTE
 
@@ -42,274 +52,303 @@ hr {
 
     */
 }
+
 /* === VARIABLES === */
 
 /* === TEXTO === */
-    p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: var(--color-text-base);
-        line-height: 30px;
-        font-size: 20px;
-    }
-    label {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        color: var(--color-text-base);
-    }
-    .bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        color: var(--color-text-base);
-        line-height: 30px;
-        font-size: 20px;
-    }
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-base);
+  line-height: 30px;
+  font-size: 20px;
+}
+
+label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: var(--color-text-base);
+}
+
+.bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--color-text-base);
+  line-height: 30px;
+  font-size: 20px;
+}
+
 /* === TEXTO === */
 
 /* === BOTONES === */
-    .btn_primary {
-        background-color: var(--color-btn-primary);
-        color: white;
-        font-size: 20px;
-        border-radius: 8px;
-        padding: 3px 10px;
-        transition: background-color 0.2s ease;
-    }
-    .btn_primary:hover {
-        background-color: var(--color-btn-primary-hover);
-        color:  white;
-    }
-    .btn_secundary {
-        background-color: var(--color-bg);
-        color: var(--color-heading);
-        font-size: 20px;
-        border-radius: 8px;
-        padding: 3px 10px;
-    }
-    .btn_secundary:hover {
-        color: var(--color-text-btn-hover);
-    }
-    a {
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 20px;
-        transition: color 0.2s ease;
-    }
-    a:hover {
-        color: var(--color-text-btn-hover);
-    }
-    .a-reverse {
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: var(--color-text-btn-hover);
-        font-size: 20px;
-        transition: color 0.2s ease;
-    }
-    .a-reverse:hover {
-        color: var(--color-heading);
-    }
-    button {
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
+.btn_primary {
+  background-color: var(--color-btn-primary);
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 3px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.btn_primary:hover {
+  background-color: var(--color-btn-primary-hover);
+  color: white;
+}
+
+.btn_secundary {
+  background-color: var(--color-bg);
+  color: var(--color-heading);
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 3px 10px;
+}
+
+.btn_secundary:hover {
+  color: var(--color-text-btn-hover);
+}
+
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-heading);
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-text-btn-hover);
+}
+
+.a-reverse {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-btn-hover);
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.a-reverse:hover {
+  color: var(--color-heading);
+}
+
+button {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* === BOTONES === */
 
 /* === TITULOS === */
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 36px;
-    }
-    h2 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 28;
-    }
-    h3 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        color: var(--color-heading);
-        font-size: 22;
-    }
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-heading);
+  font-size: 36px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-heading);
+  font-size: 28;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--color-heading);
+  font-size: 22;
+}
+
 /* === TITULOS === */
 
 /* === HEADER === */
-    .header {
-            background-color: var(--color-header);
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            height: 50px;
-        }
-        .header_logo {
-            margin-left: 40px;
-            display: flex;
-            align-items: center;
-        }
-        .header_nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .header_nav_list {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-        .header_nav_login {
-            display: flex;
-            justify-self: flex-end;
-            align-self: center;
-            margin-right: 40px;
-        }
+.header {
+  background-color: var(--color-header);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  height: 50px;
+}
+
+.header_logo {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_nav_list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.header_nav_login {
+  display: flex;
+  justify-self: flex-end;
+  align-self: center;
+  margin-right: 40px;
+}
+
 /* === HEADER === */
 
 /* === INPUT === */
-    /* Estilos generales para inputs, textarea y select */
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    textarea,
-    select {
-        width: 100%;
-        padding: 10px 16px;
-        margin-bottom: 16px;
-        border: 1.5px solid #ccc;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        font-size: 20px;
-        color: var(--color-heading);
-        transition: border-color 0.2s, box-shadow 0.2s;
-        box-sizing: border-box;
-    }
+/* Estilos generales para inputs, textarea y select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  color: var(--color-heading);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
 
-    /* Efecto al enfocar el input */
-    input:focus,
-    textarea:focus,
-    select:focus {
-        border-color: var(--color-btn-primary);
-        box-shadow: 0 0 5px rgba(0, 171, 228, 0.5);
-        outline: none;
-    }
+/* Efecto al enfocar el input */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-btn-primary);
+  box-shadow: 0 0 5px rgba(0, 171, 228, 0.5);
+  outline: none;
+}
 
-    /* Placeholder estilizado */
-    input::placeholder,
-    textarea::placeholder {
-        color: #999;
-        font-style: italic;
-    }
+/* Placeholder estilizado */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
 
-    /* Deshabilitado */
-    input:disabled,
-    textarea:disabled,
-    select:disabled {
-        background-color: #eaeaea;
-        color: #888;
-        cursor: not-allowed;
-    }
+/* Deshabilitado */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #eaeaea;
+  color: #888;
+  cursor: not-allowed;
+}
 
-    /* Botón para enviar el formulario */
-    button[type="submit"] {
-        background-color: var(--color-btn-primary);
-        color: white;
-        font-size: 20px;
-        border-radius: 8px;
-        padding: 3px 10px;
-        transition: background-color 0.2s ease;
-        border: none;
-        width: 100%;
-    }
+/* Botón para enviar el formulario */
+button[type="submit"] {
+  background-color: var(--color-btn-primary);
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 3px 10px;
+  transition: background-color 0.2s ease;
+  border: none;
+  width: 100%;
+}
 
-    button[type="submit"]:hover {
-        background-color: var(--color-btn-primary-hover);
-    }
+button[type="submit"]:hover {
+  background-color: var(--color-btn-primary-hover);
+}
+
 /* === INPUT === */
 
 /* === MENSAJES === */
 .mensaje {
-    padding: 12px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .mensaje.exito {
-    background-color: var(--color-green);
-    color: var(--color-bg);
+  background-color: var(--color-green);
+  color: var(--color-bg);
 }
 
 .mensaje.error {
-    background-color: var(--color-red);
-    color: var(--color-bg);
+  background-color: var(--color-red);
+  color: var(--color-bg);
 }
+
 /* === MENSAJES === */
 
 /* === Tablas === */
-    .tabla {
-        width: 100%;
-        border-collapse: collapse; /* Une los bordes */
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        background-color: #fff;
-        border-radius: 8px; /* Bordes redondeados */
-        overflow: hidden; /* Para que el radio se aplique bien */
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  /* Une los bordes */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* Bordes redondeados */
+  overflow: hidden;
+  /* Para que el radio se aplique bien */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .tabla th, 
-    .tabla td {
-        padding: 10px 10px;
-        text-align: center;
-        border-bottom: 1px solid ddd;
-        border-top: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-left: 1px solid #ddd;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: var(--color-heading);
-        line-height: 30px;
-        font-size: 20px;
-    }
+.tabla th,
+.tabla td {
+  padding: 10px 10px;
+  text-align: center;
+  border-bottom: 1px solid ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-heading);
+  line-height: 30px;
+  font-size: 20px;
+}
 
-    .tabla th {
-        font-weight: 600;
-    }
+.tabla th {
+  font-weight: 600;
+}
 
-    .tabla thead {
-        background-color: var(--color-header);
-        color: var(--color-heading);
-    }
+.tabla thead {
+  background-color: var(--color-header);
+  color: var(--color-heading);
+}
 
-    .tabla tbody tr {
-        border-bottom: 1px solid #ddd;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-    }
+.tabla tbody tr {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
 
-    .tabla tbody tr:nth-child(even) {
-        background-color: #f9f9f9; /* Filas alternas */
-    }
+.tabla tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Filas alternas */
+}
 
-    .tabla tbody tr:hover {
-        background-color: #f1f1f1; /* Efecto hover */
-    }
+.tabla tbody tr:hover {
+  background-color: #f1f1f1;
+  /* Efecto hover */
+}
+
 /* === Tablas === */

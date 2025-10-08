@@ -29,9 +29,9 @@ if (isset($_SESSION['id_usuario'])) {
       <div class="card_content"> <!-- Contenido de la tarjeta -->
         <h1 class="card_title">SMART PARENTS</h1> <!-- Titulo de la tarjeta -->
         <p class="card_text"> <!-- Texto de la tarjeta / descripcion del proyecto -->
-          SMART PARENTS es una plataforma web institucional desarrollada en HTML, CSS, PHP y MySQL, cuyo objetivo
-          principal es mantener informados a los padres de familia sobre la situación académica y comportamental de sus
-          hijos. Esta plataforma permitirá a los usuarios acceder a información de manera clara, rápida y segura.
+          SMART PARENTS es una plataforma web institucional desarrollada en HTML, CSS, PHP y MySQL que mantiene
+          informados a padres y estudiantes sobre el rendimiento académico y comportamiento escolar. Busca fortalecer la
+          comunicación con el colegio y facilitar el acceso a información clara, rápida y segura.
         </p>
         <div class="card_button"> <!-- Contenedor del botón -->
           <a href="views/auth/login.php" class="btn_primary">Iniciar Sesión</a>

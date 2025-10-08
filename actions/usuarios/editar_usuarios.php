@@ -1,26 +1,25 @@
 <?php
 
-    // Conexion a la base de datos
-    include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
+// Conexion a la base de datos
+include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
-    if (!isset($_GET['id'])) {
-        echo "id no especificado";
-        exit();
-    }
+if (!isset($_GET['id'])) {
+  echo "id no especificado";
+  exit();
+}
 
-    // Si se encontró id se guarda en una variable
-    $id = $_GET['id'];
+// Si se encontró id se guarda en una variable
+$id = $_GET['id'];
 
-    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $resultado = $stmt->get_result();
+$stmt = $conexion->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$resultado = $stmt->get_result();
 
-    if ($resultado->num_rows == 0) {
-        echo "usuario no encontrado";
-        exit();
-    }
+if ($resultado->num_rows == 0) {
+  echo "usuario no encontrado";
+  exit();
+}
 
-    $usuario = $resultado->fetch_assoc();
-    
-?>
+$usuario = $resultado->fetch_assoc();
+
