@@ -1,46 +1,55 @@
 <?php
-// Se inicia la sesión
+// ====================================================
+// Verificar si el usuario ya tiene la sesion iniciada
+// Para redirigirlo al dashboard
+//-----------------------------------------------------
 session_start();
 if (isset($_SESSION['id_usuario'])) {
-  header("Location: views/dashboard.php"); // Redirige si ya está logueado
+  header("Location: /smart-parents/views/dashboard.php");
   exit();
 }
+// ====================================================
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+  <!-- Configuración de la pagina -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/smart-parents/assets/img/cerebrosmart-parents.png">
   <title>Smart Parents</title>
-  <link rel="stylesheet" href="assets/css/style.css"> <!-- Vincula el css principal -->
-  <link rel="stylesheet" href="assets/css/index.css"> <!-- Vinvula el css dedicado -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Conecta la fuente -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conecta la fuente -->
+  <!-- Estilos css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <!-- Enlaza la tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"> <!-- Conecta la fuente -->
+    rel="stylesheet">
 </head>
 
 <body>
-  <?php include 'includes/landing_header.php'; ?> <!-- Incluye archivo php con el header de la pagina -->
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/landing_header.php'; ?>
+
   <main class="main">
-    <div class="main_card"> <!-- Contenedor de la tarjeta principal -->
-      <div class="card_content"> <!-- Contenido de la tarjeta -->
-        <h1 class="card_title">SMART PARENTS</h1> <!-- Titulo de la tarjeta -->
-        <p class="card_text"> <!-- Texto de la tarjeta / descripcion del proyecto -->
+    <!-- Tarjeta para mostrar la info del proyecto e iniciar sesión -->
+    <div class="main_card">
+      <div class="card_content">
+        <h1 class="card_title">SMART PARENTS</h1>
+        <p class="card_text">
           SMART PARENTS es una plataforma web institucional desarrollada en HTML, CSS, PHP y MySQL que mantiene
           informados a padres y estudiantes sobre el rendimiento académico y comportamiento escolar. Busca fortalecer la
           comunicación con el colegio y facilitar el acceso a información clara, rápida y segura.
         </p>
-        <div class="card_button"> <!-- Contenedor del botón -->
+        <div class="card_button">
           <a href="views/auth/login.php" class="btn_primary">Iniciar Sesión</a>
-          <!-- Botón que lleva a la pagina de iniciar sesión -->
         </div>
       </div>
     </div>
-    <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta"> <!-- Imagen de ilustrativa -->
+    <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta">
   </main>
 </body>
 

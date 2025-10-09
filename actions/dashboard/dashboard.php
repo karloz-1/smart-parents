@@ -1,4 +1,5 @@
 <?php
+// Consulta para mostrar el nombre completo del usuario en el dashboard
 
 // Incluye la conexion a la db
 include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
@@ -25,4 +26,3 @@ if ($resultado->num_rows === 1) {
 // 4. Cerrar conexión
 $stmt->close();
 $conexion->close();
-
