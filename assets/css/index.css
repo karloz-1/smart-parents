@@ -49,23 +49,21 @@
 
 /* === MAIN === */
 .main {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-  /* Espaciado entre items */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 100px;
 }
 
 .main_card {
   width: 600px;
-  /* Ancho fijo de la tarjeta */
+  max-height: 340px;
   border-radius: 8px;
-  /* Redondeo de bordes de 8px */
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  /* Oculta el contenido desbordado */
   background-color: var(--color-bg);
-  margin: 80px;
-  margin-left: 120px;
+  display: flex;
+  justify-self: center;
 }
 
 .card_title {
@@ -79,9 +77,12 @@
 }
 
 .card_button {
-  margin: 30px;
+  margin: 20px;
   display: flex;
   justify-content: center;
 }
 
+.id_card {
+  justify-self: center;
+}
 /* === MAIN === */
