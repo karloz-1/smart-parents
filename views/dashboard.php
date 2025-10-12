@@ -38,10 +38,9 @@ $rol = $_SESSION['rol'];
 
   <main>
     <div class="main_title">
-      <h1>Bienvenido/a
-        <?= $nombreCompleto; ?>
-      </h1>
+      <h1>Bienvenido/a <?= $nombreCompleto; ?></h1>
     </div>
+    <h2>Eventos recientes</h2>
     <div class="cards">
       <!-- Se incluye la consulta que trae toda la información de los eventos, para mostrarlos en las tarjetas -->
       <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/actions/dashboard/dashboard_cards.php'; ?>
@@ -66,29 +65,21 @@ $rol = $_SESSION['rol'];
             </h2>
           </div>
           <div class="card_text">
-            <p>
-              <?= $row['descripcion'] ?>
-            </p>
+            <p><?= $row['descripcion'] ?></p>
           </div>
           <hr>
           <div class="card_footer">
             <div class="registrado_por">
               <h3>Registrado por</h3>
-              <p>
-                <?= $row['nombre1_u2'] . " " . $row['nombre2_u2'] . " " . $row['apellido1_u2'] . " " . $row['apellido2_u2']; ?>
-              </p>
+              <p><?= $row['nombre1_u2'] . " " . $row['nombre2_u2'] . " " . $row['apellido1_u2'] . " " . $row['apellido2_u2']; ?></p>
             </div>
             <div class="area">
               <h3>Asignatura</h3>
-              <p>
-                <?= $row['asignatura']; ?>
-              </p>
+              <p><?= $row['asignatura']; ?></p>
             </div>
             <div class="fecha">
               <h3>Fecha y hora de registro</h3>
-              <p>
-                <?= $row['created_at']; ?>
-              </p>
+              <p><?= $row['created_at']; ?></p>
             </div>
           </div>
         </div>
