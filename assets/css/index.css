@@ -50,6 +50,7 @@
 /* === MAIN === */
 .main {
   display: flex;
+  align-items: center;
   gap: 150px;
   /* Espaciado entre items */
 }
@@ -81,10 +82,6 @@
   margin: 30px;
   display: flex;
   justify-content: center;
-}
-
-.id_card {
-  width: 300px;
 }
 
 /* === MAIN === */

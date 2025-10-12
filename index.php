@@ -49,7 +49,8 @@ if (isset($_SESSION['id_usuario'])) {
         </div>
       </div>
     </div>
-    <img class="id_card" src="assets/img/id_card.svg" alt="ilustracion de tarjeta">
+    <img class="id_card" src="/smart-parents/assets/img/cerebrosmart-parents.png" alt="ilustracion de tarjeta"
+      width="300px" height="300px">
   </main>
 </body>
 

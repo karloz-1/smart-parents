@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $pass = $_POST['pass'];
 
   //Login
-  $stmt = $conexion->prepare("SELECT id_usuario, password FROM usuarios WHERE identificacion = ?");
+  $stmt = $conexion->prepare("SELECT id_usuario, rol, password FROM usuarios WHERE identificacion = ?");
   $stmt->bind_param("s", $identificacion);
   $stmt->execute();
   $resultado = $stmt->get_result();
