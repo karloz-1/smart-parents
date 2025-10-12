@@ -1,3 +1,5 @@
+-- ESTRUCTURA DE LA BASE DE DATOS DE SMART PARENTS
+
 DROP DATABASE IF EXISTS smart_parents;
 CREATE DATABASE smart_parents;
 USE smart_parents;
@@ -19,7 +21,7 @@ CREATE TABLE usuarios (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabla 2: eventos_estudiantes
+-- Tabla 2: eventos
 CREATE TABLE eventos (
     id_evento INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,

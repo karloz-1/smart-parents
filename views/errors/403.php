@@ -1,28 +1,36 @@
 <?php
+// ====================================================
+// Verificar si el usuario ha iniciado sesión
+// Redirige a la página de error 401 si no está logueado
+//-----------------------------------------------------
 session_start();
 if (!isset($_SESSION['id_usuario'])) {
-  header("Location: /smart-parents/views/errors/401.php");
+  header("Location: /smart-parents/views/errors/401.php"); // 401 - Acceso denegado
   exit();
 }
 $id_usuario = $_SESSION['id_usuario'];
 $rol = $_SESSION['rol'];
+// ====================================================
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+  <!-- Configuración de la página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/smart-parents/assets/img/cerebrosmart-parents.png">
   <title>Smart Parents - 403 Forbidden</title>
-  <link rel="stylesheet" href="/smart-parents/assets/css/style.css"> <!-- Vincula el css principal -->
-  <link rel="stylesheet" href="/smart-parents/assets/css/4xx.css"> <!-- Vincula el css dedicado -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Conecta la fuente -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conecta la fuente -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"> <!-- Conecta la fuente -->
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="/smart-parents/assets/css/style.css">
+  <link rel="stylesheet" href="/smart-parents/assets/css/4xx.css">
+  <!-- Enlace a la tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/includes/dashboard_header.php'; ?>

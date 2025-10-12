@@ -1,10 +1,13 @@
 <?php
+// Backed que procesa el formulario para actualizar la informacion de los usuario a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Conexión a la base de datos
   include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 
   // Recoger y limpiar los datos del formulario
+  // (int) es para convertir el id de eventos en un numero entero
+  // trim() es para eliminar espacios al inicio y al final de la cadena de texto
   $id_usuario = (int) $_POST['id_usuario'];
   $nombre1 = trim($_POST['nombre1']);
   $nombre2 = trim($_POST['nombre2']);
@@ -21,20 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $stmt = $conexion->prepare("UPDATE usuarios SET rol = ?, identificacion = ?, nombre1 = ?, nombre2 = ?, apellido1 = ?, apellido2 = ?, email = ?, telefono = ?, password = ?, asignatura = ? WHERE id_usuario = ?");
   $stmt->bind_param("ssssssssssi", $rol, $identificacion, $nombre1, $nombre2, $apellido1, $apellido2, $email, $telefono, $password, $asignatura, $id_usuario);
 
+  // Si la consulta se ejecuta correctamente
   if ($stmt->execute()) {
     $stmt->close();
     $conexion->close();
     header("Location: /smart-parents/views/crud/usuarios/crud_usuarios.php?success=1");
     exit();
   } else {
+    // Si falla la consulta
     $stmt->close();
     $conexion->close();
     header("Location: /smart-parents/views/crud/usuarios/crud_usuarios.php?error=1");
     exit();
   }
+  // Cerrar consulta y conexion a la db
   $stmt->close();
   $conexion->close();
 } else {
   echo "Método no permitido.";
+  die();
 }
-

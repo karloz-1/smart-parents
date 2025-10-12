@@ -6,6 +6,7 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/smart-parents/config/db_config.php';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+  // Se reciben los datos
   $identificacion = $_POST["user"];
   $pass = $_POST['pass'];
 
@@ -15,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $stmt->execute();
   $resultado = $stmt->get_result();
 
+  // Si se encontraron resultados:
   if ($resultado->num_rows === 1) {
     $usuario = $resultado->fetch_assoc();
 
