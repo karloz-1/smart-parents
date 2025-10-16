@@ -7,7 +7,7 @@ echo
         <nav class="header_nav">    <!-- Contenedor de navegación del sitio -->
             <ul class="header_nav_list">    <!-- Lista de enlaces del menú de navegación -->
                 <li><a href="/smart-parents/index.php">Inicio</a></li>                     <!-- Enlace a al inicio de la pagina -->
-                <li><a href="/smart-parents/views/public/informacion.html">Información</a></li>   <!-- Enlace a la pagina de información-->
+                <li><a href="/smart-parents/views/public/informacion.php    ">Información</a></li>   <!-- Enlace a la pagina de información-->
             </ul>
         </nav>
         <div class="header_nav_login">  <!-- Contenedor del boton de iniciar sesión -->
