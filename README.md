@@ -6,6 +6,21 @@ Smarts Parents es una plataforma web institucional desarrollada en HTML, CSS, PH
 >[!TIP]
 > Este fue el proyecto de grado del programa de formación **Técnico en Programación de Software** con el sena - 2025.
 
+### Acceso rapido
+[Características](#caracteristicas)\
+[Requisitos](#requisitos)\
+[Instalación](#instalación)\
+[Uso](#uso)
+
+
+## Caracteristicas
+- Acceso controlado por roles.
+- Dashboard para administrar usuarios y eventos.
+- Añadir usuarios.
+- Añadir eventos.
+- Bandeja de entrada de eventos recientes.
+- Diseño atractivo y minimalista
+
 ## Requisitos
 Para instalar y ejecutar el software de manera **local** debes de tener [XAMPP](https://www.apachefriends.org/es/index.html) instalado en el equipo. Recomiendo instalar y usar la version **8.2.12**.
 
@@ -24,7 +39,7 @@ git clone https://github.com/karloz-1/smart-parents.git
 **MacOS:** `/Applications/XAMPP/htdocs` o `XAMPP/xamppfiles/htdocs`
 
 ### 3. Crear la base de datos
->[!WARNING] IMPORTANTE
+>[!WARNING]
 > Para este paso debes de tener previamente iniciado **XAMPP**
 
 **1. Ingresar a [phpMyAdmin](http://localhost/phpmyadmin/)** y entrar al modulo `Import`
@@ -44,14 +59,14 @@ Si todo salió bien debería de aparecer tarjetas con mensajes de éxito y color
 ![](./assets/img/readme-stuff/01-db-creada-exitosamente.png)
 
 ## Uso
->[!WARNING] IMPORTANTE
+>[!WARNING]
 > Para usar el software de manera local debes de tener **XAMPP** en ejecución
 ### 1. Ingresar a [Smart Parents](http://localhost/smart-parents/)
 
 ![](./assets/img/readme-stuff/02-smart-parents-inicio.png)
 
 ### 2. Iniciar sesión
->[!TIP] NOTA
+>[!TIP]
 > Por diseño no podrás crear una cuenta desde el segundo uno, pero si ingresas a un perfil de administrador podrás crear usuarios.
 
 Para iniciar sesión debes de ingresar algunas de las [credenciales](http://localhost/smart-parents/views/public/informacion.php) proporcionadas
