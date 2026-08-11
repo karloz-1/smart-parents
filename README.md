@@ -8,6 +8,7 @@ Smarts Parents es una plataforma web institucional desarrollada en HTML, CSS, PH
 
 ### Acceso rapido
 [Características](#caracteristicas)\
+[Probar Smart Parents](#probar-smart-parents)\
 [Requisitos](#requisitos)\
 [Instalación](#instalación)\
 [Uso](#uso)
@@ -20,6 +21,25 @@ Smarts Parents es una plataforma web institucional desarrollada en HTML, CSS, PH
 - Añadir eventos.
 - Bandeja de entrada de eventos recientes.
 - Diseño atractivo y minimalista
+
+## Probar Smart Parents
+Puedes probar y utilizar smart parents sin necesidad de instalar ni configurar nada, solo debes de entrar al siguiente enlace:
+
+https://smart-parents.ct.ws/smart-parents
+
+Esto es gracias a [Infinity Free](https://www.infinityfree.com/), allí está todo el proyecto hosteado para que no tengas que instalar absolutamente nada para probar smart parents. Solo entrar y probar desde el minuto 0.
+
+>[!TIP]
+> Puedes acceder a sección de [uso](#uso) para que puedas saber por donde iniciar.
+
+>[!WARNING]
+> Recuerda usar este enlace con responsabilidad.
+>
+> - No pongas información sensible.
+> - No elimines todos los registros.
+> - No hagas pruebas con mensajes ofensivos ni de odio.
+>
+> Ten en cuenta que todo lo que hagas podrá ser visto por los demás usuarios que también prueben el proyecto.
 
 ## Requisitos
 Para instalar y ejecutar el software de manera **local** debes de tener [XAMPP](https://www.apachefriends.org/es/index.html) instalado en el equipo. Recomiendo instalar y usar la version **8.2.12**.
